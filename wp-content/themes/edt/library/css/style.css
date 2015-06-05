@@ -1,0 +1,91 @@
+html, body {
+  background: #004ec0;
+  margin: 0;
+  padding: 0;
+  font-family: "Karla", sans-serif; }
+
+.centered {
+  margin: 0 auto; }
+
+.max-width {
+  width: 1200px; }
+
+.strd-width {
+  width: 1000px; }
+
+.full-width {
+  width: 100%; }
+
+@media (max-width: 1000px) {
+  .max-width {
+    width: 100%; }
+
+  .strd-width {
+    width: 100%; } }
+@media (max-width: 1200px) {
+  .max-width {
+    width: 100%; } }
+#page-header {
+  color: white; }
+  #page-header a:link {
+    color: white; }
+
+img#logo {
+  width: 100px;
+  height: auto; }
+
+img#logo-text {
+  width: 160px;
+  height: auto; }
+
+#top-links {
+  padding: 15px; }
+  #top-links div {
+    float: left; }
+
+@media (min-width: 1000px) {
+  img#logo {
+    width: 269px;
+    height: auto;
+    position: relative;
+    bottom: -55px;
+    z-index: 100; }
+
+  img#logo-text {
+    width: 216px;
+    height: auto; } }
+#home-map {
+  background: #4487d6; }
+  #home-map #home-map-inner {
+    background: url(../images/mag_glow.jpg);
+    background-size: cover; }
+  #home-map img#map-vector-base {
+    width: 100%; }
+  #home-map #home-map-top-border, #home-map #home-map-bottom-border {
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover; }
+  #home-map #home-map-top-border {
+    height: 2px;
+    background: url(../images/home_map_lines.png); }
+  #home-map #home-map-bottom-border {
+    height: 2px;
+    background: url(../images/home_map_lines.png);
+    background-position: 0px -3px; }
+
+@media (max-width: 1000px) {
+  #home-map #home-map-top-border, #home-map #home-map-bottom-border {
+    background-image: none;
+    background-color: #89b3e5;
+    height: 1px; } }
+@media (min-width: 1400px) {
+  #home-map {
+    background: #4487d6; }
+    #home-map #home-map-inner {
+      width: 84.57%; } }
+g#hovers polyline, g#hovers polygon, g#hovers line, g#hovers path {
+  cursor: pointer;
+  opacity: 0; }
+
+polyline:hover, polygon:hover, line:hover {
+  cursor: pointer; }

@@ -1,0 +1,68 @@
+#home-map {
+	background: #4487d6;
+	#home-map-inner {
+			background: url(../images/mag_glow.jpg);
+			background-size: cover;	
+	}
+	img#map-vector-base {
+		width: 100% ;
+	}  
+	
+	#home-map-top-border, #home-map-bottom-border {
+		background-position: center top;
+		background-repeat: no-repeat;
+		background-size: cover;	
+	}
+	
+	#home-map-top-border {
+
+		height: 2px;
+		background: url(../images/home_map_lines.png);
+	}
+	
+	#home-map-bottom-border {
+
+		height: 2px;
+		background: url(../images/home_map_lines.png);
+		background-position: 0px -3px;
+
+	}
+}
+
+@media (max-width: 1000px) {
+	#home-map {
+		#home-map-top-border, #home-map-bottom-border {
+			background-image: none;
+			background-color: #89b3e5;
+			height: 1px;
+		}
+	}
+}
+
+@media (min-width: 1400px) {
+
+	#home-map {
+		background: #4487d6;
+		#home-map-inner {
+			width: 84.57%;
+				
+		}
+		img#map-vector-base {
+
+		}
+	}
+}
+
+// map svg specific
+
+
+g#hovers {
+	polyline, polygon,  line, path {
+		cursor: pointer;
+		opacity: 0;
+	}		
+}
+
+polyline:hover,polygon:hover,line:hover {
+	cursor: pointer;
+}

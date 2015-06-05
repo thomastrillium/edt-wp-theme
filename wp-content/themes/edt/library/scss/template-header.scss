@@ -1,0 +1,41 @@
+//navigation
+#page-header {
+	color: white;
+	
+	a:link	 {
+		color: white;
+	}
+}
+
+img#logo {
+	width: 100px;
+	height: auto;	
+}
+
+
+img#logo-text {
+	width: 160px;
+	height: auto;
+}
+
+#top-links {
+	padding: 15px;
+	div {
+		float: left;
+	}
+}
+
+@media (min-width: 1000px) {
+	img#logo {	
+		width: 269px;
+		height: auto;	
+		position: relative;
+		bottom: -55px;
+		z-index: 100;
+	}
+	
+	img#logo-text {
+		width: 216px;
+		height: auto;
+	}
+}
