@@ -1,0 +1,2 @@
+﻿agency_id,agency_name,agency_url,agency_timezone,agency_phone,agency_fare_url,agency_lang
+261,El Dorado Transit,http://www.eldoradotransit.com/?referrer=gtfs,America/Los_Angeles,(530) 642-5383,http://www.eldoradotransit.com/fares.htm?referrer=gtfs,en

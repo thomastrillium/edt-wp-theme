@@ -30,35 +30,368 @@ html, body {
   #page-header a:link {
     color: white; }
 
+#main-nav {
+  float: left; }
+  #main-nav #menu-main-nav {
+    margin-top: 20px; }
+
+@media (min-width: 1200px) {
+  #main-nav {
+    margin-left: 40px; } }
+@media (max-width: 800px) {
+  #page-header #logo-holder {
+    margin: 0 auto;
+    width: 100%;
+    text-align: center; }
+  #page-header img#logo {
+    float: none; }
+  #page-header img#logo-text {
+    float: none; } }
+#logo-holder {
+  height: 120px;
+  width: 45%;
+  float: left; }
+
+@media (max-width: 999px) {
+  #logo-holder {
+    height: 50px;
+    width: 35%;
+    margin-left: 5%;
+    float: left; }
+
+  #main-nav {
+    float: none; }
+
+  .menu-main-nav-container ul#menu-main-nav {
+    margin: 0;
+    padding: 0; }
+
+  #main-nav #menu-main-nav {
+    margin-top: 0; } }
 img#logo {
   width: 100px;
-  height: auto; }
+  height: auto;
+  float: left; }
 
 img#logo-text {
   width: 160px;
-  height: auto; }
+  height: auto;
+  float: left; }
 
 #top-links {
-  padding: 15px; }
-  #top-links div {
+  padding: 15px;
+  margin: 0 auto;
+  width: 65%;
+  color: #a3c8f7; }
+  #top-links #top-links-transit-description {
     float: left; }
+  #top-links #top-links-phone {
+    float: right; }
+
+@media (max-width: 799px) {
+  #top-links {
+    padding: 0x;
+    margin: 0 auto;
+    display: block;
+    width: auto;
+    color: #a3c8f7;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 3px; }
+    #top-links #top-links-transit-description {
+      float: none;
+      display: inline-block; }
+    #top-links #top-links-phone {
+      float: none;
+      margin-top: 5px;
+      display: inline-block; } }
+@media (max-width: 800px -1) {
+  #main-nav {
+    float: none;
+    width: 100%;
+    text-align: center; }
+    #main-nav .menu-main-nav-container {
+      display: inline-block; }
+      #main-nav .menu-main-nav-container ul#menu-main-nav {
+        margin: 0;
+        padding: 0;
+        display: inline-block; }
+
+  #logo-holder {
+    float: none; } }
+.menu-main-nav-container ul {
+  text-transform: uppercase;
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.35);
+  letter-spacing: 2.5px;
+  font-size: .8em; }
+
+.menu-main-nav-container li {
+  margin: 0;
+  padding: 0; }
+
+.menu-main-nav-container a {
+  margin: 0;
+  padding: 0; }
+
+.menu-main-nav-container ul {
+  list-style: none; }
+
+.menu-main-nav-container a {
+  text-decoration: none; }
+
+.menu-main-nav-container {
+  /* This means on every screen no matter the size, the width will cover the top  */
+  line-height: normal;
+  text-align: center;
+  vertical-align: middle; }
+
+.menu-main-nav-container > ul > li {
+  float: left;
+  margin-left: 15px;
+  /* This is when the drop down box appears */
+  position: relative;
+  padding: 15px 10px; }
+
+.menu-main-nav-container > ul > li > i {
+  width: 20px;
+  height: 20px;
+  background: green;
+  display: block;
+  clear: both;
+  margin: 0 auto; }
+
+.menu-main-nav-container ul ul a:link,
+.menu-main-nav-container ul ul a:active,
+.menu-main-nav-container ul ul a:hover,
+.menu-main-nav-container ul ul a:visited {
+  color: white !important; }
+
+.menu-main-nav-container > ul > li > a {
+  color: white; }
+
+.menu-main-nav-container > ul > li > a:hover, .menu-main-nav-container > ul > li > a:visited, .menu-main-nav-container > ul > li > a:active {
+  color: #fafafa !important; }
+
+.menu-main-nav-container > ul > li > ul {
+  opacity: 0;
+  visibility: hidden;
+  padding: 0px 0 0 0;
+  background-color: #004ec1;
+  border: 2px solid white;
+  text-align: left;
+  /* This is for the text when box is dropped down, centered isnt always totally in the middle so best to have on the left */
+  position: absolute;
+  top: 65px;
+  /* This is for the drop down annimation */
+  left: 50%;
+  margin-left: -92px;
+  width: 180px;
+  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.4); }
+
+.menu-main-nav-container > ul > li:hover > ul {
+  opacity: 1;
+  top: 65px;
+  /* This is how far from the top the drop down annimation will go  */
+  visibility: visible;
+  z-index: 150; }
+
+.menu-main-nav-container > ul > li > ul:before {
+  content: '';
+  display: block;
+  border-color: transparent transparent white transparent;
+  border-style: solid;
+  border-width: 10px;
+  /* The border on the drop down box  */
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  margin-left: -10px; }
+
+.menu-main-nav-container > ul ul > li {
+  position: relative;
+  text-align: center; }
+
+.menu-main-nav-container ul ul a {
+  /* This is the drop down menu, change font or size when its drops down */
+  color: #323232;
+  font-family: Verdana, 'Lucida Grande';
+  font-size: 13px;
+  padding: 10px 8px 10px 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  display: block; }
+
+.menu-main-nav-container ul ul li a:link,
+.menu-main-nav-container ul ul li a:active,
+.menu-main-nav-container ul ul li a:hover {
+  color: white; }
+
+.menu-main-nav-container ul ul a:hover {
+  background-color: #0063f4; }
+
+.menu-main-nav-container ul ul ul {
+  /* In this build i havent included a sub sub menu in, but here is the code if ever needed */
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: -16px;
+  left: 206px;
+  /* This is for a sub sub menu */
+  padding: 16px 0 20px 0;
+  background-color: #fafafa;
+  text-align: left;
+  width: 160px;
+  -webkit-transition: all .3s;
+  -moz-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.4); }
+
+.menu-main-nav-container ul ul > li:hover > ul {
+  opacity: 1;
+  left: 196px;
+  visibility: visible; }
+
+.menu-main-nav-container ul ul a:hover {
+  background-color: #0063f4;
+  color: white; }
+
+#menu-item-12 i {
+  background: url(../images/edt-sprites.png);
+  background-position: -55px -6px;
+  width: 36.5px;
+  height: 25px;
+  background-size: 500px; }
+
+#menu-item-15 i {
+  background: url(../images/edt-sprites.png);
+  background-position: -8.5px -5px;
+  width: 36.5px;
+  height: 25px;
+  background-size: 500px; }
+
+#menu-item-13 i {
+  background: url(../images/edt-sprites.png);
+  background-position: -105px -6px;
+  width: 25px;
+  height: 25px;
+  background-size: 500px; }
+
+#menu-item-14 i {
+  background: url(../images/edt-sprites.png);
+  background-position: -147px -4.5px;
+  width: 20px;
+  height: 25px;
+  background-size: 500px; }
+
+#menu-item-14:hover i {
+  background-position: -147px -30px; }
 
 @media (min-width: 1000px) {
   img#logo {
     width: 269px;
     height: auto;
     position: relative;
-    bottom: -55px;
+    bottom: -5px;
     z-index: 100; }
 
   img#logo-text {
-    width: 216px;
-    height: auto; } }
+    width: 39%;
+    height: auto;
+    position: relative;
+    bottom: -10px;
+    left: -20px; } }
+#planner-holder {
+  position: relative; }
+
+#planner-box {
+  position: absolute;
+  top: 100px;
+  left: 14px;
+  background: #004ec1;
+  color: white;
+  z-index: 100;
+  border: 2px solid white;
+  -webkit-box-shadow: 0px 4px 34px -9px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 4px 34px -9px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 4px 34px -9px rgba(0, 0, 0, 0.75);
+  height: 74px;
+  width: 242px;
+  -webkit-transition: width .4s,left .4s,top .4s;
+  /* Safari */
+  transition: width .4s,left .4s,top .4s; }
+  #planner-box .minimized-hidden {
+    display: none; }
+  #planner-box #trip-planner-title {
+    text-transform: uppercase;
+    text-align: center; }
+  #planner-box #planner-form-holder {
+    float: left;
+    width: 84%;
+    padding: 1%; }
+  #planner-box #expand-planner-button {
+    width: 8.6%;
+    padding: 0 2%;
+    float: right;
+    height: 74px;
+    line-height: 74px;
+    white-space: nowrap;
+    border-left: 1px solid #759fdd;
+    cursor: pointer;
+    text-align: center; }
+  #planner-box #expand-planner-button:hover {
+    background: #0063f4; }
+
+#planner-box.expanded {
+  width: 100%;
+  left: 0px;
+  top: 80px; }
+  #planner-box.expanded .minimized-hidden {
+    display: inherit; }
+
+@media (max-width: 999px) {
+  #planner-box {
+    top: 40px; }
+
+  #planner-box.expanded {
+    top: 10px;
+    border-left: 0;
+    border-right: 0; } }
+@media (max-width: 799px) {
+  #planner-box {
+    width: 100%;
+    float: none;
+    position: relative;
+    display: block;
+    top: 0;
+    left: 0;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    border-right: 0;
+    border-left: 0; } }
+#path-highlights > g,
+#path-highlights > path {
+  opacity: 0; }
+
 #home-map {
+  overflow: hidden;
   background: #4487d6; }
   #home-map #home-map-inner {
     background: url(../images/mag_glow.jpg);
-    background-size: cover; }
+    background-size: cover;
+    -webkit-transition: margin-top .3s;
+    /* Safari */
+    transition: margin-top .3s;
+    margin-top: 0; }
+  #home-map #home-map-inner.moved-down {
+    margin-top: 150px; }
   #home-map img#map-vector-base {
     width: 100%; }
   #home-map #home-map-top-border, #home-map #home-map-bottom-border {
@@ -78,14 +411,178 @@ img#logo-text {
     background-image: none;
     background-color: #89b3e5;
     height: 1px; } }
+#home-map {
+  background: #4487d6; }
+  #home-map #home-map-inner {
+    width: 114%;
+    max-width: 1571px;
+    position: relative;
+    left: -7%; }
+
 @media (min-width: 1400px) {
   #home-map {
     background: #4487d6; }
     #home-map #home-map-inner {
-      width: 84.57%; } }
+      width: 100%;
+      left: 0%; } }
+@media (min-width: 1400px) and (max-width: 100px) {
+  #home-map {
+    background: #4487d6; }
+    #home-map #home-map-inner {
+      width: 110%;
+      left: -5%; } }
 g#hovers polyline, g#hovers polygon, g#hovers line, g#hovers path {
   cursor: pointer;
   opacity: 0; }
 
 polyline:hover, polygon:hover, line:hover {
   cursor: pointer; }
+
+#interactive-map-link-dashed-line {
+  width: 95%;
+  border-bottom: 1px dashed white;
+  height: 53px;
+  margin-bottom: 53px; }
+  #interactive-map-link-dashed-line a:link,
+  #interactive-map-link-dashed-line a:visited,
+  #interactive-map-link-dashed-line a:active,
+  #interactive-map-link-dashed-line a:link {
+    text-decoration: none; }
+  #interactive-map-link-dashed-line #interactive-map-home-button {
+    background: #004ec1;
+    color: white;
+    width: 289px;
+    max-width: 80%;
+    height: 15px;
+    text-transform: uppercase;
+    border: 2px solid white;
+    padding: 15px;
+    position: relative;
+    bottom: -25px;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none; }
+    #interactive-map-link-dashed-line #interactive-map-home-button a:link, #interactive-map-link-dashed-line #interactive-map-home-button a:active, #interactive-map-link-dashed-line #interactive-map-home-button a:visited {
+      text-decoration: none; }
+    #interactive-map-link-dashed-line #interactive-map-home-button i {
+      border-left: 7px solid white;
+      border-bottom: 7px solid transparent;
+      border-top: 7px solid transparent;
+      border-right: 0px;
+      display: inline-block;
+      width: 10px;
+      height: 0px;
+      margin-left: 10px;
+      position: relative;
+      top: 1px; }
+  #interactive-map-link-dashed-line #interactive-map-home-button:hover {
+    background: #0063f4; }
+
+#home-banner-holder img {
+  border: 1px solid white;
+  width: -moz-calc(100% - 2px);
+  /* WebKit */
+  width: -webkit-calc(100% - 2px);
+  /* Opera */
+  width: -o-calc(100% - 2px);
+  /* Standard */
+  width: calc(100% - 2px); }
+
+@media (max-width: 1000px) {
+  #home-banner-holder img {
+    border-right: 0;
+    border-left: 0;
+    width: 100%; } }
+#home-page-service-description {
+  color: white;
+  padding-top: 30px;
+  border-top: #7a8ba3 solid 1px;
+  margin-top: 15px;
+  font-size: .9em;
+  line-height: 1.4em; }
+  #home-page-service-description .inner {
+    display: block;
+    margin: 10px;
+    margin-bottom: 20px;
+    clear: both; }
+
+#home-page-quote-holder {
+  text-align: center;
+  padding-top: 20px; }
+
+#home-page-quote,
+#home-page-quote-author {
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+  display: inline-block; }
+
+#home-page-quote {
+  font-size: 1.9em;
+  line-height: 1.5em; }
+
+#home-page-quote-author {
+  font-size: 1em;
+  margin-bottom: 20px; }
+
+#dark-home-bg {
+  background: #00204e; }
+
+.menu-home_rider_info-container h3,
+.menu-home_about-container h3 {
+  color: #e1edff;
+  text-transform: uppercase;
+  font-size: .9em;
+  border-bottom: #7a8ba3 solid 1px;
+  margin-right: 20px;
+  margin-bottom: 0;
+  padding-bottom: 5px; }
+.menu-home_rider_info-container ul,
+.menu-home_about-container ul {
+  width: 50%;
+  float: left;
+  list-style: none;
+  padding: 0; }
+  .menu-home_rider_info-container ul a:link, .menu-home_rider_info-container ul a:active, .menu-home_rider_info-container ul a:visited,
+  .menu-home_about-container ul a:link,
+  .menu-home_about-container ul a:active,
+  .menu-home_about-container ul a:visited {
+    color: #beefff;
+    text-decoration: none;
+    font-size: .9em;
+    font-weight: normal; }
+  .menu-home_rider_info-container ul a:hover,
+  .menu-home_about-container ul a:hover {
+    color: #f1fcff; }
+
+.menu-home_rider_info-container,
+.menu-home_about-container {
+  width: 50%;
+  float: left; }
+
+.menu-home_about-container {
+  width: 50%; }
+  .menu-home_about-container h3 {
+    margin-right: 0px;
+    margin-bottom: 0;
+    padding-bottom: 5px;
+    width: 100%; }
+
+@media (max-width: 1000px) {
+  .menu-home_rider_info-container,
+  .menu-home_about-container {
+    width: 48%;
+    float: left;
+    padding-right: 1%;
+    padding-left: 1%; } }
+@media (max-width: 800px) {
+  .menu-home_rider_info-container {
+    width: 96%;
+    float: left;
+    padding: 2%; }
+
+  .menu-home_about-container {
+    width: 96%;
+    float: left;
+    padding: 2%; } }

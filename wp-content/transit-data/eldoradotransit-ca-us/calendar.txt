@@ -1,0 +1,4 @@
+service_id,service_name,monday,tuesday,wednesday,thursday,friday,saturday,sunday,start_date,end_date
+1597A2874,Year Round (Mon-Fri),1,1,1,1,1,0,0,20150706,20160101
+1624A2899,Saturday Express Year Round (Sat),0,0,0,0,0,1,0,20150706,20160101
+1613A2889,Limited Holiday Service (No regular service days),0,0,0,0,0,0,0,20150101,20160101

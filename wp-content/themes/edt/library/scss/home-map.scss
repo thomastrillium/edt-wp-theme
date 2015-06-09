@@ -1,8 +1,24 @@
+
+#path-highlights > g,
+#path-highlights > path{
+		//-webkit-transition: opacity .15s;
+		//transition: opacity .15s;
+		opacity: 0;
+}
+
 #home-map {
+	overflow: hidden;
 	background: #4487d6;
 	#home-map-inner {
 			background: url(../images/mag_glow.jpg);
 			background-size: cover;	
+			-webkit-transition: margin-top .3s; /* Safari */
+			transition: margin-top .3s;
+			margin-top: 0;
+			
+	}
+	#home-map-inner.moved-down {
+		margin-top: 150px;
 	}
 	img#map-vector-base {
 		width: 100% ;
@@ -29,7 +45,7 @@
 	}
 }
 
-@media (max-width: 1000px) {
+@media (max-width: $responsive-stnd) { 
 	#home-map {
 		#home-map-top-border, #home-map-bottom-border {
 			background-image: none;
@@ -39,19 +55,62 @@
 	}
 }
 
-@media (min-width: 1400px) {
 
-	#home-map {
+
+
+#home-map {
 		background: #4487d6;
 		#home-map-inner {
-			width: 84.57%;
+			width: 114%;
+			max-width: 1571px;
+			position: relative;
+			left: -7%;
+			svg {
+			
+			}
 				
 		}
 		img#map-vector-base {
 
 		}
 	}
+@media (min-width: 1400px) {
+
+	#home-map {
+		background: #4487d6;
+		#home-map-inner {
+			width: 100%;
+			//	position: relative;
+				left:0%;
+			svg {
+				
+			}	
+		}
+		img#map-vector-base {
+
+		}
+	}
 }
+@media (min-width: 1400px) {
+@media (max-width: 100px) {
+
+	#home-map {
+		background: #4487d6;
+		#home-map-inner {
+			width: 110%;
+			//	position: relative;
+				left:-5%;
+			svg {
+				
+			}	
+		}
+		img#map-vector-base {
+
+		}
+	}
+}
+}
+
 
 // map svg specific
 
@@ -61,6 +120,10 @@ g#hovers {
 		cursor: pointer;
 		opacity: 0;
 	}		
+}
+
+.route-hover {
+
 }
 
 polyline:hover,polygon:hover,line:hover {

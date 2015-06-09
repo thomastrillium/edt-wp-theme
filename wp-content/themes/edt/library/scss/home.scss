@@ -1,9 +1,113 @@
 //home.scss
+#interactive-map-link-dashed-line {
+	width: 95%;
+	border-bottom: 1px dashed white;
+	height: 53px;
+	margin-bottom: 53px;
+	a:link ,
+	a:visited ,
+	a:active,
+	a:link  {
+		text-decoration: none;	
+	}
+	#interactive-map-home-button {
+		background: #004ec1;
+		color: white;
+		width: 289px;
+		max-width: 80%;
+		height: 15px;
+		text-transform: uppercase;
+		border: 2px solid white;
+		padding: 15px;
+		position: relative;
+		bottom: -25px;
+		text-align: center;
+		cursor: pointer;
+		text-decoration: none;	
+		a:link, a:active, a:visited {
+			text-decoration: none;			
+		}
+		i {
+			border-left: 7px solid white;
+			border-bottom: 7px solid rgba(0,0,0,0);
+			border-top:7px solid rgba(0,0,0,0);
+			border-right: 0px;
+			display: inline-block;
+			width: 10px;
+			height: 0px;
+			margin-left: 10px;
+			position: relative;
+			top: 1px;
+		}
+	}
+	#interactive-map-home-button:hover {
+		background: lighten(#004ec1,10);
+	}
+}
 
 #home-banner-holder {
-	
+	img {
+		border: 1px solid white;
+		width: -moz-calc(100% - 2px);
+		/* WebKit */
+		width: -webkit-calc(100% - 2px);
+		/* Opera */
+		width: -o-calc(100% - 2px);
+		/* Standard */
+		width: calc(100% - 2px);
+	}
+}
+@media (max-width: $responsive-stnd) {
+	#home-banner-holder {
+		img {
+			border-right:0;
+			border-left:0;	
+			width: 100%;
+		}
+	}
 }
 
 #home-links-holder {
 	
+}
+
+#home-page-service-description {
+	color: white;
+	padding-top: 30px;
+	border-top:  #7a8ba3 solid 1px;
+	margin-top: 15px;
+	font-size: .9em;
+	line-height:1.4em;
+	.inner {
+		display: block;
+		margin: 10px;
+		margin-bottom: 20px;
+		clear: both;
+	}
+}
+
+#home-page-quote-holder {
+	text-align: center;
+	padding-top: 20px;
+}
+
+#home-page-quote ,
+#home-page-quote-author {
+	color: white;
+	text-transform: uppercase;
+	font-weight: bold;
+	text-shadow: 2px 2px 3px rgba(0,0,0,.3);
+	display: inline-block;
+}
+#home-page-quote{
+	font-size: 1.9em;  
+	line-height: 1.5em;
+}
+#home-page-quote-author{
+	font-size: 1em;
+	margin-bottom: 20px;
+}
+
+#dark-home-bg {
+	background: $dark-bg;
 }

@@ -7,35 +7,452 @@
 	}
 }
 
+#main-nav {
+	float: left;
+	
+	#menu-main-nav {
+		margin-top: 20px;
+	}
+}
+
+@media (min-width: $responsive-large) {
+	#main-nav {
+		margin-left: 40px;
+	} 
+}
+
+@media (max-width: 800px) {
+	#page-header {
+		#logo-holder {
+			margin: 0 auto;
+			width: 100%;
+			text-align: center;
+		}
+		
+		img#logo {
+			float: none;
+		}
+		img#logo-text {
+			float: none;
+		}
+		
+		
+	}
+}
+
+#logo-holder {
+	height: 120px;
+	width: 45%;
+	float: left;
+}
+
+@media (max-width: ($responsive-stnd - 1)) {
+	#logo-holder {
+		height: 50px;
+		width: 35%;
+		margin-left: 5%;
+		float: left;
+	}
+	
+	#main-nav  {
+		//border-top: #7a8ba3 solid 1px;
+		float: none;
+	}
+	
+	.menu-main-nav-container ul#menu-main-nav {
+		margin:0;
+		padding: 0;
+	}	
+	#main-nav #menu-main-nav {
+		margin-top: 0;
+	}
+}
+
 img#logo {
 	width: 100px;
 	height: auto;	
+	float: left;
 }
 
 
 img#logo-text {
 	width: 160px;
 	height: auto;
+	float: left;
 }
 
 #top-links {
 	padding: 15px;
-	div {
+	margin: 0 auto;
+	width: 65%;
+	color: #a3c8f7;
+
+	#top-links-transit-description {
 		float: left;
+		
+	}	
+	#top-links-phone {
+		float: right;
 	}
 }
 
-@media (min-width: 1000px) {
+@media (max-width: ($responsive-med - 1)) {
+	#top-links {
+		padding: 0x;
+		margin: 0 auto;
+		display: block;
+		width: auto;
+		color: #a3c8f7;
+		font-weight: bold;
+		text-align: center;
+		margin-bottom: 3px;
+		#top-links-transit-description {
+			float: none;
+			display: inline-block;
+		}	
+		#top-links-phone {
+			float: none;
+			margin-top: 5px;
+			display: inline-block;
+		}
+	}
+}
+
+
+@media (max-width: ($responsive-med -1 )) {
+	#main-nav {
+		float: none;
+		width: 100%;
+		text-align: center;
+		.menu-main-nav-container {
+			display: inline-block;
+			ul#menu-main-nav {
+				margin: 0;
+				padding: 0;
+				display: inline-block;			
+			}
+		}
+	}
+	#logo-holder {
+		float: none;
+	}
+}
+
+.menu-main-nav-container ul { 
+	text-transform: uppercase;
+	text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.35);
+	letter-spacing: 2.5px;
+	font-size: .8em;
+	
+}
+
+.menu-main-nav-container li { margin: 0; padding: 0;}
+
+.menu-main-nav-container a { margin: 0; padding: 0;}
+
+.menu-main-nav-container ul {list-style: none;}
+
+.menu-main-nav-container a {text-decoration: none;}
+
+
+
+.menu-main-nav-container {
+
+	//height: 70px;			/* This is for the main menu bit at the top */
+
+			/* This means on every screen no matter the size, the width will cover the top  */
+
+	line-height: normal;
+
+	text-align: center;
+
+
+	
+	vertical-align: middle;
+
+}
+
+
+
+.menu-main-nav-container > ul > li {
+
+    float: left;
+
+    margin-left: 15px;       /* This is when the drop down box appears */
+
+    position: relative;
+    
+    i {
+    	
+    }
+    
+   padding: 15px 10px;
+
+}
+
+.menu-main-nav-container > ul > li > i {
+		width: 20px;
+    	height: 20px;
+    	background: green;
+    	display: block;
+    	clear: both;
+    	margin: 0 auto;
+}
+
+.menu-main-nav-container ul ul a:link,
+.menu-main-nav-container ul ul a:active,
+.menu-main-nav-container ul ul a:hover,
+.menu-main-nav-container ul ul a:visited,{
+	color: white !important;
+}	
+
+.menu-main-nav-container > ul > li > a {
+
+    color: rgb(255,255,255); 
+
+   // font-family: Verdana, 'Lucida Grande';
+
+    //font-size: 14px;
+
+   // line-height: 70px;		/* This bit chances the size of the text on the main heading */
+
+   // padding: 15px 24px;		/* This is the padding between the different titles */
+
+	
+
+}
+
+
+
+.menu-main-nav-container > ul > li > a:hover ,.menu-main-nav-container > ul > li > a:visited ,.menu-main-nav-container > ul > li > a:active {color: rgb(250,250,250) !important; }
+
+.menu-main-nav-container > ul > li > ul {
+	
+    opacity: 0;
+
+    visibility: hidden;
+
+    padding: 0px 0 0 0;
+
+    background-color: $main-blue;
+    
+    border: 2px solid white;
+
+    text-align: left;  /* This is for the text when box is dropped down, centered isnt always totally in the middle so best to have on the left */
+
+    position: absolute;
+
+    top: 65px;			/* This is for the drop down annimation */
+
+    left: 50%;
+
+    margin-left: -92px;
+
+    width: 180px;
+	
+	
+
+
+-webkit-box-shadow: 0px 1px 3px rgba(0,0,0,.4);
+
+   -moz-box-shadow: 0px 1px 3px rgba(0,0,0,.4);
+
+        box-shadow: 0px 1px 3px rgba(0,0,0,.4);
+
+}
+
+
+
+.menu-main-nav-container > ul > li:hover > ul {
+
+    opacity: 1;
+
+    top: 65px;			/* This is how far from the top the drop down annimation will go  */
+
+    visibility: visible;
+    
+    z-index: 150;
+
+}
+
+
+
+.menu-main-nav-container > ul > li > ul:before{
+
+    content: '';
+
+    display: block;
+
+    border-color: transparent transparent white transparent;
+
+    border-style: solid;
+
+    border-width: 10px;  /* The border on the drop down box  */ 
+
+    position: absolute;
+
+    top: -20px;
+
+    left: 50%;
+
+    margin-left: -10px;
+
+}
+
+
+
+.menu-main-nav-container > ul ul > li { position: relative;
+text-align: center;}
+
+
+
+.menu-main-nav-container ul ul a{     /* This is the drop down menu, change font or size when its drops down */
+
+    color: rgb(50,50,50);
+
+    font-family: Verdana, 'Lucida Grande';
+
+    font-size: 13px;   
+
+   
+
+    padding: 10px 8px 10px 16px;
+    border-bottom: 1px solid rgba(255,255,255,.1);
+
+    display: block;
+
+
+
+}
+
+.menu-main-nav-container ul ul li a:link,
+.menu-main-nav-container ul ul li a:active,
+.menu-main-nav-container ul ul li a:hover {
+	color: white;
+}
+
+
+
+.menu-main-nav-container ul ul a:hover {background-color: lighten($main-blue,10);} 
+
+
+
+
+
+.menu-main-nav-container ul ul ul {   /* In this build i havent included a sub sub menu in, but here is the code if ever needed */
+
+    visibility: hidden;
+
+    opacity: 0;
+
+    position: absolute;
+
+    top: -16px;
+
+    left: 206px;		/* This is for a sub sub menu */
+
+    padding: 16px 0 20px 0;
+
+    background-color: rgb(250,250,250);
+
+    text-align: left;
+
+    width: 160px;
+
+-webkit-transition: all .3s;
+
+   -moz-transition: all .3s;
+
+     -o-transition: all .3s;
+
+        transition: all .3s;
+
+-webkit-border-radius: 5px;
+
+   -moz-border-radius: 5px;
+
+        border-radius: 5px;
+
+-webkit-box-shadow: 0px 1px 3px rgba(0,0,0,.4);
+
+   -moz-box-shadow: 0px 1px 3px rgba(0,0,0,.4);
+
+        box-shadow: 0px 1px 3px rgba(0,0,0,.4);
+
+}
+
+.menu-main-nav-container ul ul > li:hover > ul { 
+	
+	opacity: 1; 
+	
+	left: 196px; 
+	
+	visibility: visible;}
+
+.menu-main-nav-container ul ul a:hover{
+
+    background-color: lighten($main-blue,10);
+
+    color: rgb(255,255,255);
+
+}
+
+#menu-item-12 i{
+	
+	
+	background: url(../images/edt-sprites.png);
+	background-position: -55px -6px;
+	width: 36.5px;
+	height: 25px;
+	background-size: 500px;
+}
+
+#menu-item-15 i{
+	background: url(../images/edt-sprites.png);
+	background-position: -8.5px -5px;
+	width: 36.5px;
+	height: 25px;
+	background-size: 500px;
+}
+
+#menu-item-13 i{
+	background: url(../images/edt-sprites.png);
+	background-position: -105px -6px;
+	width: 25px;
+	height: 25px;
+	background-size: 500px;
+}
+
+#menu-item-14 i{
+	background: url(../images/edt-sprites.png);
+	background-position: -147px -4.5px;
+	width: 20px;
+	height: 25px;
+	background-size: 500px;
+}
+#menu-item-14:hover i{ 
+	background-position: -147px -30px; 
+}
+
+
+ 
+
+
+
+@media (min-width: $responsive-stnd) {
 	img#logo {	
 		width: 269px;
 		height: auto;	
 		position: relative;
-		bottom: -55px;
+		bottom: -5px;
 		z-index: 100;
 	}
 	
 	img#logo-text {
-		width: 216px;
+		width: 39%;
 		height: auto;
+		position: relative;
+		bottom: -10px;
+		left: -20px;
 	}
 }
