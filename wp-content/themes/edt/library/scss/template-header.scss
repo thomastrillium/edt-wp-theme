@@ -46,12 +46,45 @@
 	float: left;
 }
 
+img#logo {
+	width: 100px;
+	height: auto;	
+	float: left;
+}
+
+
+img#logo-text {
+	width: 160px;
+	height: auto;
+	float: left;
+}
+
 @media (max-width: ($responsive-stnd - 1)) {
 	#logo-holder {
 		height: 50px;
 		width: 35%;
 		margin-left: 5%;
 		float: left;
+		
+		
+		img#logo {
+			width: 100px;
+			height: auto;	
+			float: left;
+			position:relative;
+			top: 0px; 
+		}
+
+
+		img#logo-text {
+			width: 160px;
+			height: auto;
+			float: left;
+			position:relative;
+			top: -6px;
+			left: 4px; 
+		}
+		
 	}
 	
 	#main-nav  {
@@ -68,18 +101,7 @@
 	}
 }
 
-img#logo {
-	width: 100px;
-	height: auto;	
-	float: left;
-}
 
-
-img#logo-text {
-	width: 160px;
-	height: auto;
-	float: left;
-}
 
 #top-links {
 	padding: 15px;
@@ -188,6 +210,10 @@ img#logo-text {
     
    padding: 15px 10px;
 
+}
+
+.menu-main-nav-container > ul > li {
+	cursor: pointer;
 }
 
 .menu-main-nav-container > ul > li > i {
@@ -397,41 +423,76 @@ text-align: center;}
 
 }
 
-#menu-item-12 i{
+
+.menu-main-nav-container ul li svg {
+	display: block;
+	width: 30px;
+	  height: 20px;
+ 	 margin: 0 auto;
+ 	 position: relative;
+ 	 top: 0;
+	-webkit-transition: all .2s;
+   -moz-transition: all .3s;
+     -o-transition: all .3s;
+        transition: all .3s;
+}
+
+.menu-main-nav-container ul li ul li .main-nav-svg-holder  {
+	display: none;
+}
+.menu-main-nav-container ul li:hover svg {
+	top: -4px;
+}
+
+#commuter-svg, #dial-a-ride-svg, #local-svg, #how-to-ride-svg{
+	
+	 path,circle{
+		fill: #90baf8;
+	}
+}
+#commuter-svg, #dial-a-ride-svg, #local-svg, #how-to-ride-svg{
+	 path.hover, circle.hover {
+		fill: #b3cdf5;
+		
+	}
+}
+
+.main-nav-svg-holder {
+	height: 34px;
+}
+
+
+#menu-item-12 svg{
 	
 	
-	background: url(../images/edt-sprites.png);
-	background-position: -55px -6px;
+
 	width: 36.5px;
 	height: 25px;
-	background-size: 500px;
+
 }
 
-#menu-item-15 i{
-	background: url(../images/edt-sprites.png);
-	background-position: -8.5px -5px;
-	width: 36.5px;
+#menu-item-15 svg{ 
+
+
+	width: 40.5px;
+
+}
+
+#menu-item-13 svg{
+	
+	width: 27px;
 	height: 25px;
-	background-size: 500px;
+
 }
 
-#menu-item-13 i{
-	background: url(../images/edt-sprites.png);
-	background-position: -105px -6px;
-	width: 25px;
-	height: 25px;
-	background-size: 500px;
-}
-
-#menu-item-14 i{
-	background: url(../images/edt-sprites.png);
-	background-position: -147px -4.5px;
+#menu-item-14 svg{
+	
 	width: 20px;
-	height: 25px;
-	background-size: 500px;
+	height: 26px;
+	
 }
-#menu-item-14:hover i{ 
-	background-position: -147px -30px; 
+#menu-item-14:hover i{ // how to ride
+	//background-position: -147px -30px; 
 }
 
 

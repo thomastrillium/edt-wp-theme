@@ -35,7 +35,7 @@
 	'menu_id'         => '',
 	'echo'            => true,
 	'fallback_cb'     => 'wp_page_menu',
-	'before'          => '<i></i>',
+	'before'          => '',
 	'after'           => '',
 	'link_before'     => '',
 	'link_after'      => '',

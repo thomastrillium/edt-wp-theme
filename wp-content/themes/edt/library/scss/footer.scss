@@ -1,4 +1,33 @@
 //footer.scss
-footer#main-footer {
 
+
+
+footer#main-footer {
+	background: $dark-bg;	
+	
+	
+	
+	width: 100%;
+	.inner {
+		width: 1000px;
+		margin: 0 auto;
+		padding: 10px;
+		color: rgba(135,155,185, .8);
+		font-size: .8em;
+		
+	}
+}
+
+@media(min-width: 1400px) {
+	footer#main-footer {
+		background: #13253b; /* Old browsers */
+background: -moz-linear-gradient(left,  #13253b 0%, #001430 0%, #001e4a 20%, #001e4a 82%, #001430 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, right top, color-stop(0%,#13253b), color-stop(0%,#001430), color-stop(20%,#001e4a), color-stop(82%,#001e4a), color-stop(100%,#001430)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(left,  #13253b 0%,#001430 0%,#001e4a 20%,#001e4a 82%,#001430 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(left,  #13253b 0%,#001430 0%,#001e4a 20%,#001e4a 82%,#001430 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(left,  #13253b 0%,#001430 0%,#001e4a 20%,#001e4a 82%,#001430 100%); /* IE10+ */
+background: linear-gradient(to right,  #13253b 0%,#001430 0%,#001e4a 20%,#001e4a 82%,#001430 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#13253b', endColorstr='#001430',GradientType=1 ); /* IE6-9 */
+
+	}
 }

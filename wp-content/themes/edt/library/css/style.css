@@ -25,6 +25,27 @@ html, body {
 @media (max-width: 1200px) {
   .max-width {
     width: 100%; } }
+.main-blue-grad-bg {
+  background: #004ec1; }
+
+@media (min-width: 1400px) {
+  .main-blue-grad-bg {
+    background: #13253b;
+    /* Old browsers */
+    background: -moz-linear-gradient(left, #13253b 0%, #003c94 0%, #014fc1 20%, #014fc1 82%, #003c94 100%);
+    /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%, #13253b), color-stop(0%, #003c94), color-stop(20%, #014fc1), color-stop(82%, #014fc1), color-stop(100%, #003c94));
+    /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left, #13253b 0%, #003c94 0%, #014fc1 20%, #014fc1 82%, #003c94 100%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left, #13253b 0%, #003c94 0%, #014fc1 20%, #014fc1 82%, #003c94 100%);
+    /* Opera 11.10+ */
+    background: -ms-linear-gradient(left, #13253b 0%, #003c94 0%, #014fc1 20%, #014fc1 82%, #003c94 100%);
+    /* IE10+ */
+    background: linear-gradient(to right, #13253b 0%, #003c94 0%, #014fc1 20%, #014fc1 82%, #003c94 100%);
+    /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#13253b', endColorstr='#003c94',GradientType=1 );
+    /* IE6-9 */ } }
 #page-header {
   color: white; }
   #page-header a:link {
@@ -52,22 +73,6 @@ html, body {
   width: 45%;
   float: left; }
 
-@media (max-width: 999px) {
-  #logo-holder {
-    height: 50px;
-    width: 35%;
-    margin-left: 5%;
-    float: left; }
-
-  #main-nav {
-    float: none; }
-
-  .menu-main-nav-container ul#menu-main-nav {
-    margin: 0;
-    padding: 0; }
-
-  #main-nav #menu-main-nav {
-    margin-top: 0; } }
 img#logo {
   width: 100px;
   height: auto;
@@ -78,6 +83,35 @@ img#logo-text {
   height: auto;
   float: left; }
 
+@media (max-width: 999px) {
+  #logo-holder {
+    height: 50px;
+    width: 35%;
+    margin-left: 5%;
+    float: left; }
+    #logo-holder img#logo {
+      width: 100px;
+      height: auto;
+      float: left;
+      position: relative;
+      top: 0px; }
+    #logo-holder img#logo-text {
+      width: 160px;
+      height: auto;
+      float: left;
+      position: relative;
+      top: -6px;
+      left: 4px; }
+
+  #main-nav {
+    float: none; }
+
+  .menu-main-nav-container ul#menu-main-nav {
+    margin: 0;
+    padding: 0; }
+
+  #main-nav #menu-main-nav {
+    margin-top: 0; } }
 #top-links {
   padding: 15px;
   margin: 0 auto;
@@ -151,6 +185,9 @@ img#logo-text {
   /* This is when the drop down box appears */
   position: relative;
   padding: 15px 10px; }
+
+.menu-main-nav-container > ul > li {
+  cursor: pointer; }
 
 .menu-main-nav-container > ul > li > i {
   width: 20px;
@@ -262,36 +299,47 @@ img#logo-text {
   background-color: #0063f4;
   color: white; }
 
-#menu-item-12 i {
-  background: url(../images/edt-sprites.png);
-  background-position: -55px -6px;
+.menu-main-nav-container ul li svg {
+  display: block;
+  width: 30px;
+  height: 20px;
+  margin: 0 auto;
+  position: relative;
+  top: 0;
+  -webkit-transition: all .2s;
+  -moz-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s; }
+
+.menu-main-nav-container ul li ul li .main-nav-svg-holder {
+  display: none; }
+
+.menu-main-nav-container ul li:hover svg {
+  top: -4px; }
+
+#commuter-svg path, #commuter-svg circle, #dial-a-ride-svg path, #dial-a-ride-svg circle, #local-svg path, #local-svg circle, #how-to-ride-svg path, #how-to-ride-svg circle {
+  fill: #90baf8; }
+
+#commuter-svg path.hover, #commuter-svg circle.hover, #dial-a-ride-svg path.hover, #dial-a-ride-svg circle.hover, #local-svg path.hover, #local-svg circle.hover, #how-to-ride-svg path.hover, #how-to-ride-svg circle.hover {
+  fill: #b3cdf5; }
+
+.main-nav-svg-holder {
+  height: 34px; }
+
+#menu-item-12 svg {
   width: 36.5px;
-  height: 25px;
-  background-size: 500px; }
+  height: 25px; }
 
-#menu-item-15 i {
-  background: url(../images/edt-sprites.png);
-  background-position: -8.5px -5px;
-  width: 36.5px;
-  height: 25px;
-  background-size: 500px; }
+#menu-item-15 svg {
+  width: 40.5px; }
 
-#menu-item-13 i {
-  background: url(../images/edt-sprites.png);
-  background-position: -105px -6px;
-  width: 25px;
-  height: 25px;
-  background-size: 500px; }
+#menu-item-13 svg {
+  width: 27px;
+  height: 25px; }
 
-#menu-item-14 i {
-  background: url(../images/edt-sprites.png);
-  background-position: -147px -4.5px;
+#menu-item-14 svg {
   width: 20px;
-  height: 25px;
-  background-size: 500px; }
-
-#menu-item-14:hover i {
-  background-position: -147px -30px; }
+  height: 26px; }
 
 @media (min-width: 1000px) {
   img#logo {
@@ -323,18 +371,34 @@ img#logo-text {
   box-shadow: 0px 4px 34px -9px rgba(0, 0, 0, 0.75);
   height: 74px;
   width: 242px;
-  -webkit-transition: width .4s,left .4s,top .4s;
+  -webkit-transition: left .4s,top .4s;
   /* Safari */
-  transition: width .4s,left .4s,top .4s; }
+  transition: left .4s,top .4s; }
   #planner-box .minimized-hidden {
     display: none; }
-  #planner-box #trip-planner-title {
+  #planner-box .trip-planner-label {
     text-transform: uppercase;
-    text-align: center; }
+    font-size: 1em; }
+  #planner-box #trip-planner-title {
+    text-align: center;
+    margin-top: 6px;
+    margin-bottom: 6px; }
   #planner-box #planner-form-holder {
     float: left;
     width: 84%;
     padding: 1%; }
+    #planner-box #planner-form-holder input#start-location {
+      width: 92%;
+      border: 0;
+      background: 0;
+      background: #055ad9;
+      border: 1px solid #b0c8ec;
+      margin: 2%;
+      height: 17px;
+      padding: 5px 2%;
+      opacity: 1; }
+    #planner-box #planner-form-holder input[type=text] {
+      opacity: 0; }
   #planner-box #expand-planner-button {
     width: 8.6%;
     padding: 0 2%;
@@ -354,6 +418,34 @@ img#logo-text {
   top: 80px; }
   #planner-box.expanded .minimized-hidden {
     display: inherit; }
+  #planner-box.expanded #trip-planner-title {
+    float: left;
+    margin: 10px 5px;
+    margin-top: 16px; }
+  #planner-box.expanded .trip-planner-label {
+    float: left;
+    width: auto;
+    height: auto; }
+  #planner-box.expanded #planner-form-holder {
+    position: relative; }
+    #planner-box.expanded #planner-form-holder input#start-location {
+      margin: 0;
+      margin: 10px 5px;
+      float: left;
+      width: 70px; }
+    #planner-box.expanded #planner-form-holder input[type=text] {
+      margin: 10px 5px;
+      position: relative;
+      display: block;
+      float: left;
+      width: 70px;
+      height: inherit;
+      background: 0;
+      background: #055ad9;
+      border: 1px solid #b0c8ec;
+      height: 17px;
+      padding: 5px 2%;
+      opacity: 1; }
 
 @media (max-width: 999px) {
   #planner-box {
@@ -406,31 +498,34 @@ img#logo-text {
     background: url(../images/home_map_lines.png);
     background-position: 0px -3px; }
 
+#home-map.top-fixed {
+  position: fixed;
+  top: 0;
+  z-index: 999; }
+
 @media (max-width: 1000px) {
   #home-map #home-map-top-border, #home-map #home-map-bottom-border {
     background-image: none;
     background-color: #89b3e5;
     height: 1px; } }
-#home-map {
-  background: #4487d6; }
-  #home-map #home-map-inner {
-    width: 114%;
-    max-width: 1571px;
-    position: relative;
-    left: -7%; }
+#home-map #home-map-inner {
+  width: 114%;
+  max-width: 1571px;
+  position: relative;
+  left: -7%; }
+
+#home-map.top-fixed #home-map-inner {
+  width: 114%;
+  max-width: 9999999px; }
 
 @media (min-width: 1400px) {
-  #home-map {
-    background: #4487d6; }
-    #home-map #home-map-inner {
-      width: 100%;
-      left: 0%; } }
+  #home-map #home-map-inner {
+    width: 100%;
+    left: 0%; } }
 @media (min-width: 1400px) and (max-width: 100px) {
-  #home-map {
-    background: #4487d6; }
-    #home-map #home-map-inner {
-      width: 110%;
-      left: -5%; } }
+  #home-map #home-map-inner {
+    width: 110%;
+    left: -5%; } }
 g#hovers polyline, g#hovers polygon, g#hovers line, g#hovers path {
   cursor: pointer;
   opacity: 0; }
@@ -505,6 +600,13 @@ polyline:hover, polygon:hover, line:hover {
     margin: 10px;
     margin-bottom: 20px;
     clear: both; }
+    #home-page-service-description .inner a:link {
+      color: #8ebcff;
+      clear: both;
+      display: block; }
+  @media (min-width: 1000px) {
+    #home-page-service-description .inner {
+      margin: 0px; } }
 
 #home-page-quote-holder {
   text-align: center;
@@ -527,8 +629,55 @@ polyline:hover, polygon:hover, line:hover {
   margin-bottom: 20px; }
 
 #dark-home-bg {
-  background: #00204e; }
+  background: #00204e;
+  /* Old browsers */ }
 
+@media (min-width: 1400px) {
+  #dark-home-bg {
+    background: #13253b;
+    /* Old browsers */
+    background: -moz-linear-gradient(left, #13253b 0%, #001430 0%, #001e4a 20%, #001e4a 82%, #001430 100%);
+    /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%, #13253b), color-stop(0%, #001430), color-stop(20%, #001e4a), color-stop(82%, #001e4a), color-stop(100%, #001430));
+    /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left, #13253b 0%, #001430 0%, #001e4a 20%, #001e4a 82%, #001430 100%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left, #13253b 0%, #001430 0%, #001e4a 20%, #001e4a 82%, #001430 100%);
+    /* Opera 11.10+ */
+    background: -ms-linear-gradient(left, #13253b 0%, #001430 0%, #001e4a 20%, #001e4a 82%, #001430 100%);
+    /* IE10+ */
+    background: linear-gradient(to right, #13253b 0%, #001430 0%, #001e4a 20%, #001e4a 82%, #001430 100%);
+    /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#13253b', endColorstr='#001430',GradientType=1 );
+    /* IE6-9 */ } }
+footer#main-footer {
+  background: #00204e;
+  width: 100%; }
+  footer#main-footer .inner {
+    width: 1000px;
+    margin: 0 auto;
+    padding: 10px;
+    color: rgba(135, 155, 185, 0.8);
+    font-size: .8em; }
+
+@media (min-width: 1400px) {
+  footer#main-footer {
+    background: #13253b;
+    /* Old browsers */
+    background: -moz-linear-gradient(left, #13253b 0%, #001430 0%, #001e4a 20%, #001e4a 82%, #001430 100%);
+    /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%, #13253b), color-stop(0%, #001430), color-stop(20%, #001e4a), color-stop(82%, #001e4a), color-stop(100%, #001430));
+    /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left, #13253b 0%, #001430 0%, #001e4a 20%, #001e4a 82%, #001430 100%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left, #13253b 0%, #001430 0%, #001e4a 20%, #001e4a 82%, #001430 100%);
+    /* Opera 11.10+ */
+    background: -ms-linear-gradient(left, #13253b 0%, #001430 0%, #001e4a 20%, #001e4a 82%, #001430 100%);
+    /* IE10+ */
+    background: linear-gradient(to right, #13253b 0%, #001430 0%, #001e4a 20%, #001e4a 82%, #001430 100%);
+    /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#13253b', endColorstr='#001430',GradientType=1 );
+    /* IE6-9 */ } }
 .menu-home_rider_info-container h3,
 .menu-home_about-container h3 {
   color: #e1edff;

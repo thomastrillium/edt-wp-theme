@@ -110,6 +110,25 @@ function edt_add_stylesheets() {
 			get_stylesheet_directory_uri() . '/library/js/map.js',
 			array( 'edt_jquery' )
 		);
+		
+		wp_enqueue_script(
+			'map-svg-zoom-plugin',
+			get_stylesheet_directory_uri() . '/library/js/jquery.svg.pan.zoom.js',
+			array( 'edt_jquery' )
+		);
+		wp_enqueue_script(
+			'load_svg_icons',
+			get_stylesheet_directory_uri() . '/library/js/icons.js',
+			array( 'edt_jquery' )
+		);
+		
+		wp_enqueue_script(
+			'main_nav',
+			get_stylesheet_directory_uri() . '/library/js/nav.js',
+			array( 'edt_jquery' )
+		);
+		
+		
     }
 
 add_action( 'wp_enqueue_scripts', 'edt_add_stylesheets' );
@@ -158,6 +177,14 @@ class Main_Nav_Walker extends Walker {
     
 
 }
+
+// adds item id
+function custom_walker_nav_menu_start_el($item_output, $item, $depth, $args){
+  $output = '<div class="main-nav-svg-holder"><svg rel="'.slugify($item->title).'-svg"> <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#'.slugify($item->title).'-svg" ></use></svg></div>';
+  $output .= $item_output;
+  return $output;
+}
+add_filter( 'walker_nav_menu_start_el', 'custom_walker_nav_menu_start_el' , 10, 4 );
 
 
 

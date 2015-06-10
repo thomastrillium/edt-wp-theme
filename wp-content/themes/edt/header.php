@@ -8,10 +8,13 @@
 		<meta name="viewport" content="width=320, initial-scale=1">
 
 <head>
+	
 	<?php
 	wp_head(); 
 	?>
 </head>
-
+<body class="main-blue-grad-bg">
+<?php 
+include_once("wp-content/themes/edt/library/svg/icon-defs.svg"); ?>
 <?php
 ?>

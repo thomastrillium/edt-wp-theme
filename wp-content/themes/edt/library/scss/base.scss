@@ -47,3 +47,22 @@ html,body {
 #main-nav {
  
 }
+
+.main-blue-grad-bg {
+	background: $main-blue;
+}
+
+@media (min-width: 1400px) {
+	.main-blue-grad-bg {
+		background: #13253b; /* Old browsers */
+background: -moz-linear-gradient(left,  #13253b 0%, #003c94 0%, #014fc1 20%, #014fc1 82%, #003c94 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, right top, color-stop(0%,#13253b), color-stop(0%,#003c94), color-stop(20%,#014fc1), color-stop(82%,#014fc1), color-stop(100%,#003c94)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(left,  #13253b 0%,#003c94 0%,#014fc1 20%,#014fc1 82%,#003c94 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(left,  #13253b 0%,#003c94 0%,#014fc1 20%,#014fc1 82%,#003c94 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(left,  #13253b 0%,#003c94 0%,#014fc1 20%,#014fc1 82%,#003c94 100%); /* IE10+ */
+background: linear-gradient(to right,  #13253b 0%,#003c94 0%,#014fc1 20%,#014fc1 82%,#003c94 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#13253b', endColorstr='#003c94',GradientType=1 ); /* IE6-9 */
+
+
+	}
+}

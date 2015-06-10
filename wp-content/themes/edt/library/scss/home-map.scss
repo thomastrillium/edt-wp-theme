@@ -9,6 +9,10 @@
 #home-map {
 	overflow: hidden;
 	background: #4487d6;
+	
+	
+
+	
 	#home-map-inner {
 			background: url(../images/mag_glow.jpg);
 			background-size: cover;	
@@ -16,7 +20,11 @@
 			transition: margin-top .3s;
 			margin-top: 0;
 			
+			
+			
 	}
+	
+	
 	#home-map-inner.moved-down {
 		margin-top: 150px;
 	}
@@ -45,6 +53,14 @@
 	}
 }
 
+#home-map.top-fixed {
+	position: fixed;
+	top: 0; 
+	z-index: 999;
+	}
+
+
+
 @media (max-width: $responsive-stnd) { 
 	#home-map {
 		#home-map-top-border, #home-map-bottom-border {
@@ -59,7 +75,7 @@
 
 
 #home-map {
-		background: #4487d6;
+		
 		#home-map-inner {
 			width: 114%;
 			max-width: 1571px;
@@ -74,10 +90,17 @@
 
 		}
 	}
+	
+#home-map.top-fixed {
+	#home-map-inner {
+			width: 114%;
+			max-width: 9999999px;;
+	}
+}
 @media (min-width: 1400px) {
 
 	#home-map {
-		background: #4487d6;
+		
 		#home-map-inner {
 			width: 100%;
 			//	position: relative;
@@ -95,7 +118,7 @@
 @media (max-width: 100px) {
 
 	#home-map {
-		background: #4487d6;
+
 		#home-map-inner {
 			width: 110%;
 			//	position: relative;

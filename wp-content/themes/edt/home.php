@@ -15,7 +15,7 @@ get_template_part('home-map');
 <div id="home-banner-holder" class="centered strd-width" >
 	<img src="<?php echo get_template_directory_uri(); ?>/library/images/home-banner-temp.jpg" width="100%"/>
 </div><!-- end home-banner-holder -->
-<div id="home-page-quote-holder" class="centered strd-width">
+<div id="home-page-quote-holder" class="centered strd-width ">
 	 <div class="inner">
 	 	<div id="home-page-quote">"<?php echo esc_attr( get_option('home_quote') ); ?>"</div>
 	 	<div id="home-page-quote-author">- <?php echo esc_attr( get_option('home_quote_author') ); ?></div>	 	
@@ -30,6 +30,7 @@ get_template_part('home-map');
 <div id="home-page-service-description" class="centered strd-width">
 	 <div class="inner">
 	 	<?php echo esc_attr( get_option('home_description') ); ?><a href="<?php echo get_site_url(); ?>/about-us">Read More >></a>
+	 	<svg  width="30" height="30" viewBox="0 0 100 100"> <use xlink:href="#commuter-icon" /></svg>
 	 </div><!-- end class="inner" -->
 	 <br style="clear: both;" />
 </div><!-- end home-page-service-description -->

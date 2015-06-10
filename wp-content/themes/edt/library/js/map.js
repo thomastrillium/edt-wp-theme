@@ -1,4 +1,6 @@
 var hoverObjs = [];
+var floatingMap= false;
+var origMapHeight;
 //var $hoverStroke;
 function showHighlight(routeName) {
 
@@ -46,11 +48,96 @@ function hideHighlights() {
 
 }  
 
+
+function setMapBounds(bounds) {
+	$('#home-map svg')[0].setAttribute('viewBox','');
+	
+	
+	//// need to find contrained bounds
+	//var maXWidthOverW =MaxWidth/w;
+	//var maxHeightOverH = MaxHeight/h;
+	//if(MaxWidth/w < MaxHeight/h) {
+//		var newW = 
+	//} 
+	var paddingX = -40,
+		paddingY = -40,
+		paddingW = 80,
+		paddingH = 80;
+	$('#home-map svg')[0].setAttribute('viewBox',(bounds[0]+paddingX)+' '+(bounds[1]+paddingY)+' '+(bounds[2]+paddingW)+' '+(bounds[3]+paddingH));
+}
+
+function resetMapBounds() {
+	$('#home-map svg')[0].setAttribute('viewBox','0 0 3030 1274.9');
+}
+
+
+
 jQuery(document).ready(function($) {
 
-	if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+	//if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
  		// some code..
-	}
+ 		var routeNames = [
+							["commuter",[293, 444, 1998, 456]], 
+							["placerville",[1864, 342, 438, 449]], 
+							["cameronpark",[1317, 444, 285, 367]], 
+							["fiftyX",[764, 457, 1200, 370]],
+ 						    ["pollockpines",[1914, 235, 821, 537]],
+ 						    ["diamondsprings",[1766, 440, 419, 603]]
+ 						  ];
+ 						  
+ 		console.log(routeNames);
+ 		
+
+	
+	var distance = $('#home-map').offset().top,
+    $window = $(window);
+    var mapPadding = 0;
+    var mapScrollArea = 400;
+    var mapScrollPieceSize = mapScrollArea/routeNames.length;
+    origMapHeight = $('#home-map').height();
+	
+	$('#home-map').css('height',origMapHeight);
+	//$('#home-map svg').attr('height',origMapHeight);
+	//$('#home-map svg').attr('width',$('#home-map').width());
+	
+	$window.scroll(function() {
+		var found = false;
+		hideHighlights();
+		for(var i = 0; i<routeNames.length; i++) {
+			if ( $window.scrollTop() >= (distance-mapPadding+(i*mapScrollPieceSize)) &&  $window.scrollTop() < distance-mapPadding+((i+1)*mapScrollPieceSize)) {
+				setMapBounds(routeNames[i][1]);
+				showHighlight(routeNames[i][0]);
+				console.log('200!!!!!: '+routeNames[i][1][0]);
+				found = true;
+				$('#home-map-spacer').css('height', 10000);//$window.scrollTop() - 	distance + origMapHeight);
+				$('#home-map svg').attr('height',origMapHeight);
+			//	$('#home-map svg').attr('width',$('#home-map').width());
+			}
+		}
+		if(!found) {
+			resetMapBounds();
+			$('#home-map').removeClass('top-fixed');
+			floatingMap = false;	
+			$('#home-map svg').removeAttr('height');
+			$('#home-map svg').removeAttr('width');		
+			$('#home-map').css('height',origMapHeight);
+			$('#home-map-spacer').css('height', 0)
+			//$('#home-map svg').attr('height',origMapHeight);
+			$('#stroke-paths').css('opacity',1);
+			$('#paths-expanded').css('opacity',1);
+		} else {
+			$('#home-map').addClass('top-fixed');
+			floatingMap = true;
+			$('#stroke-paths').css('opacity',.3);
+			$('#paths-expanded').css('opacity',.3);
+		}
+	});
+ 		
+ 		// find hiegh of top of map
+ 		//$('#').offset().top 
+	//}
+	
+	
 
 
 //	$('polygon, line, polyline').css('stroke-width','70px');
@@ -65,12 +152,30 @@ jQuery(document).ready(function($) {
 	});
 	
 	$('#hovers_1_').find('polygon, path').on('mouseenter click', function() {
-		var routeName = $(this).attr('id').split('_')[0];
-		//console.log(routeName);
-		showHighlight(routeName);
+		if(!floatingMap){
+			var routeName = $(this).attr('id').split('_')[0];
+			//console.log(routeName);
+			showHighlight(routeName);
+		}
 		
 	}).on('mouseout mouseleave', function() {
-		hideHighlights();
+		if(!floatingMap){
+			hideHighlights();
+		}		
 	});
+	
+	
+	// set up table/mobile map scroll behavior
+	
+/*	var $map = $("svg").svgPanZoom(
+		{options:{limits: { // the limits in which the image can be moved. If null or undefined will use the initialViewBox plus 15% in each direction
+			x: 0,
+			y: 0,
+			x2: 900,
+			y2: 600
+   		 }}});
+	var zoomElem = $('fiftyX_x5F_1_2_');
+	$map.setViewBox(100, 100, 400, 400, 1);*/
+	
 });
 
