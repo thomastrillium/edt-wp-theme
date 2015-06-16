@@ -8,7 +8,7 @@ jQuery(document).ready(function($) {
 		//console.log(defs);
 		var icon = document.getElementById(svgName);
 		$('#'+svgName).find('path,circle').attr("class", "hover");
-		$('#'+svgName).find('path,circle').attr("style", '-webkit-filter: drop-shadow(12px 12px 7px rgba(0,0,0,0.5)); filter: drop-shadow(12px 12px 7px rgba(0,0,0,0.5));');
+		$('#'+svgName).find('path,circle').attr("style", '-webkit-filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.5)); filter: drop-shadow(2px 2px 2px  rgba(0,0,0,0.5));');
 		
 	},function() {
 		var svgName = $(this).find('svg').attr('rel');

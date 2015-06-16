@@ -1,4 +1,6 @@
 
+
+
 #path-highlights > g,
 #path-highlights > path{
 		//-webkit-transition: opacity .15s;
@@ -7,21 +9,39 @@
 }
 
 #home-map {
-	overflow: hidden;
 	background: #4487d6;
+	position: relative;	
 	
-	
-
+	#home-map-spacer {
+		display: block; 
+	}
 	
 	#home-map-inner {
-			background: url(../images/mag_glow.jpg);
+			opacity: 1;
+		
+			top: 0;
 			background-size: cover;	
-			-webkit-transition: margin-top .3s; /* Safari */
-			transition: margin-top .3s;
+			-webkit-transition: margin-top .3s, opacity .2s; /* Safari */
+			transition: margin-top .3s, opacity .2s;
 			margin-top: 0;
 			
 			
 			
+	}
+	
+	@media (max-width: $responsive-stnd) {
+		#home-map-inner {
+			opacity: 1;
+			max-width: 1400px;
+			top: 0;
+			background-size: cover;	
+			-webkit-transition: margin-top .3s, opacity .2s; /* Safari */
+			transition: margin-top .3s, opacity .2s;
+			margin-top: 0;
+			
+			
+			
+		}
 	}
 	
 	
@@ -54,10 +74,15 @@
 }
 
 #home-map.top-fixed {
-	position: fixed;
-	top: 0; 
-	z-index: 999;
+	#home-map-inner{
+		position: fixed;
+		//top: 0; 
+		z-index: 999;
+		background: #4487d6;
+		max-height: 75vh;
+	
 	}
+}
 
 
 
@@ -77,10 +102,7 @@
 #home-map {
 		
 		#home-map-inner {
-			width: 114%;
-			max-width: 1571px;
-			position: relative;
-			left: -7%;
+		
 			svg {
 			
 			}
@@ -93,8 +115,9 @@
 	
 #home-map.top-fixed {
 	#home-map-inner {
-			width: 114%;
-			max-width: 9999999px;;
+			width: 100%;
+			
+			
 	}
 }
 @media (min-width: 1400px) {
@@ -102,37 +125,18 @@
 	#home-map {
 		
 		#home-map-inner {
-			width: 100%;
-			//	position: relative;
-				left:0%;
-			svg {
-				
-			}	
+				width: 110%;
+				position: relative;
+				//left:-5%;
+				max-width: 1400px;
+			
 		}
 		img#map-vector-base {
 
 		}
 	}
 }
-@media (min-width: 1400px) {
-@media (max-width: 100px) {
 
-	#home-map {
-
-		#home-map-inner {
-			width: 110%;
-			//	position: relative;
-				left:-5%;
-			svg {
-				
-			}	
-		}
-		img#map-vector-base {
-
-		}
-	}
-}
-}
 
 
 // map svg specific
@@ -151,4 +155,10 @@ g#hovers {
 
 polyline:hover,polygon:hover,line:hover {
 	cursor: pointer;
+}
+
+#stroke-paths,#paths-expanded {
+		//-webkit-transition: opacity .4s; /* Safari */
+		//transition: opacity .4s; 
+		opacity: 1;
 }

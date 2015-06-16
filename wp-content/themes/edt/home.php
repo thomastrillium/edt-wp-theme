@@ -3,18 +3,24 @@ get_header();
 get_template_part('template-header');
 get_template_part('planner');
 get_template_part('home-map'); 
+get_template_part('legend');
 
 // do home pagey stuff like pull in image 
 ?>
 <div id="interactive-map-link-holder" class="centered strd-width" >
 	<div id="interactive-map-link-dashed-line" class="centered">
-		<a href="<?php echo get_site_url(); ?>/map"><div id="interactive-map-home-button" class="centered">See Full Zoomable Map<i></i></div></a>
+		<a href="<?php echo get_site_url(); ?>/map"><div id="interactive-map-home-button" class="centered">See Full Interactive Map<i></i></div></a>
 
 	</div><!-- end id="interactive-map-link-dashed-line" -->
 </div><!-- end id="interactive-map-link-holder" -->
 <div id="home-banner-holder" class="centered strd-width" >
 	<img src="<?php echo get_template_directory_uri(); ?>/library/images/home-banner-temp.jpg" width="100%"/>
 </div><!-- end home-banner-holder -->
+<div id="social-and-other-links" class="centered strd-width">
+	<svg id="facebook-home-link"> <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#facebook-svg" ></use></svg>
+	<svg id="twitter-home-link"> <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#twitter-svg" ></use></svg>
+	<svg id="youtube-home-link"> <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#youtube-svg" ></use></svg>
+</div><!-- end "social-and-other-links" -->
 <div id="home-page-quote-holder" class="centered strd-width ">
 	 <div class="inner">
 	 	<div id="home-page-quote">"<?php echo esc_attr( get_option('home_quote') ); ?>"</div>

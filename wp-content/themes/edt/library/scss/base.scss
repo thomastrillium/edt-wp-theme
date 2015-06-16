@@ -6,6 +6,7 @@ html,body {
 	background: #004ec0;
 	margin: 0;
 	padding: 0;
+	width: 100%;
 	font-family: $karla;
 	//font-weight:
 }
@@ -16,10 +17,12 @@ html,body {
 
 .max-width {
  width: 1200px;
+ max-width: 100%;
 }
 
 .strd-width {
  	width: 1000px;
+ 	max-width: 100%;
 }
 
 .full-width {
@@ -66,3 +69,77 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#13253b', end
 
 	}
 }
+
+
+
+.base-only {
+	display: inherit;
+}
+
+.min-sml,.only-med,.only-stnd,.min-med, .only-med, .only-stnd, .only-large, .min-stnd, .min-large {
+	display: none;
+}
+
+
+
+
+@media (min-width: $responsive-sml) {
+	.base-only {
+		display: none;
+	}
+	
+	.only-sml {
+		display: inherit;
+	}
+	.min-sml {
+		display: inherit;
+	}
+}
+
+@media (min-width: $responsive-med) {
+	.only-sml {
+		display: none;
+	}
+	.max-sml {
+		display: none;
+	}
+	.only-med {
+		display: inherit;
+	}
+	.min-med {
+		display: inherit;
+	}
+}
+
+@media (min-width: $responsive-stnd) {
+	.only-med {
+		display: none;
+	}
+	.max-med {
+		display: none;
+	}
+	.only-stnd {
+		display: inherit;
+	}
+	.min-stnd {
+		display: inherit; 
+	}
+}
+
+@media (min-width: $responsive-large) {
+	.only-stnd {
+		display: none;
+	}
+	.max-stnd {
+		display: none;
+	}
+	.only-large {
+		display: inherit;
+	}
+	.min-large {
+		display: inherit;
+	}
+}
+
+
+

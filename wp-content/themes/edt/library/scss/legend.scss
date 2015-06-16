@@ -1,0 +1,43 @@
+//legend.scss
+
+#map-legend {
+	
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	margin-top: 150px;
+	ul {
+		
+		
+	}
+	li {
+		
+		list-style: none;
+		
+		#legend-link {
+			height: 100%;
+			background: red;
+			float: right;
+			width: 30px;
+			display: inline-block;
+		}
+	}
+	
+	li.home-legend-button {
+		padding: 55px;
+		border: 2px solid white;
+		border-right: 0;
+		border-left: 0;
+		color: white;
+		text-transform: uppercase;
+		text-align: center;
+		
+		
+	}
+}
+
+@media (min-width: $responsive-stnd) {
+	#map-legend {
+		display: none;	
+	}
+}

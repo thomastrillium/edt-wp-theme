@@ -10,6 +10,7 @@ footer#main-footer {
 	width: 100%;
 	.inner {
 		width: 1000px;
+		max-width: calc(100% - 20px);
 		margin: 0 auto;
 		padding: 10px;
 		color: rgba(135,155,185, .8);

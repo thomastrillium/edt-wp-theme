@@ -420,17 +420,17 @@ function trillium_gtfs_update_settings_page() {
 						// Insert the post into the database
 						$post_to_update_id = wp_insert_post( $my_post );
 						
-					/*	 
-						update_field('field_5484fb3b6cdeb', $route_id        	, $post_to_update_id); 
-						update_field('field_5484fb446cdec', intval(str_replace("\"","",$route_short_name)), $post_to_update_id); 
-						update_field('field_5484fb4a6cded',str_replace("\"","", $route_long_name) 	, $post_to_update_id); 
-						update_field('field_5484fb516cdee', str_replace("\"","",$route_desc)    	, $post_to_update_id); 
-						update_field('field_5484fb576cdef', sanitize_text_field($route_text_color)		 , $post_to_update_id); 
-						update_field('field_5484fb2c6cdea', $route_color 			, $post_to_update_id); 
-						update_field('field_548ba96eaf994', str_replace("\"","",$route_freq).'*'.$route_first_bus.'*'.$route_last_bus    	, $post_to_update_id);  // fix this line
+					 
+						update_field('field_557b451a67dc8', $route_id        	, $post_to_update_id); 
+						update_field('field_557b458667dc9', $route_short_name, $post_to_update_id); 
+						update_field('field_557b459067dca',$route_long_name 	, $post_to_update_id); 
+						update_field('field_557b459867dcb', $route_desc   	, $post_to_update_id); 
+						update_field('field_557b45b367dcd', $route_text_color		 , $post_to_update_id); 
+						update_field('field_557b45a067dcc', $route_color 			, $post_to_update_id); 
 						
 						
-						*/
+						
+					
 				}
 				$lineCount ++;
 			}

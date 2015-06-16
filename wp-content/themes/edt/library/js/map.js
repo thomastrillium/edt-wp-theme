@@ -1,6 +1,23 @@
 var hoverObjs = [];
 var floatingMap= false;
 var origMapHeight;
+var mapX ,
+	mapY ,
+	mapW ,
+	mapH ;
+	
+var mapXTarg ,
+	mapYTarg ,
+	mapWTarg ,
+	mapHTarg ;
+	
+var origMapX ,
+	origMapY ,
+	origMapW ,
+	origMapH ;
+	
+var routeBounds;
+
 //var $hoverStroke;
 function showHighlight(routeName) {
 
@@ -50,40 +67,78 @@ function hideHighlights() {
 
 
 function setMapBounds(bounds) {
-	$('#home-map svg')[0].setAttribute('viewBox','');
 	
+	var paddingX = -60,
+		paddingY = -60,
+		paddingW = 120,
+		paddingH = 120;
+		
+	mapXTarg = bounds.x+paddingX;
+	mapYTarg = bounds.y+paddingY;
+	mapWTarg = bounds.width+paddingW;
+	mapHTarg = bounds.height+paddingH;
 	
-	//// need to find contrained bounds
-	//var maXWidthOverW =MaxWidth/w;
-	//var maxHeightOverH = MaxHeight/h;
-	//if(MaxWidth/w < MaxHeight/h) {
-//		var newW = 
-	//} 
-	var paddingX = -40,
-		paddingY = -40,
-		paddingW = 80,
-		paddingH = 80;
-	$('#home-map svg')[0].setAttribute('viewBox',(bounds[0]+paddingX)+' '+(bounds[1]+paddingY)+' '+(bounds[2]+paddingW)+' '+(bounds[3]+paddingH));
 }
 
 function resetMapBounds() {
-	$('#home-map svg')[0].setAttribute('viewBox','0 0 3030 1274.9');
+
+	mapXTarg = origMapX;
+	mapYTarg = origMapY;
+	mapWTarg = origMapW;
+	mapHTarg = origMapH;
+
+}
+
+function updateMap() {
+	
+	var smoothing = 10;
+	mapX += (mapXTarg-mapX)/smoothing;
+	mapY += (mapYTarg-mapY)/smoothing;
+	mapW += (mapWTarg-mapW)/smoothing;
+	mapH += (mapHTarg-mapH)/smoothing;
+	
+	$('#home-map svg')[0].setAttribute('viewBox',Math.round(mapX)+' '+
+												 Math.round(mapY)+' '+
+												 Math.round(mapW)+' '+
+												 Math.round(mapH));
+	
 }
 
 
 
 jQuery(document).ready(function($) {
 
-	//if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+
+	mapX = mapXTarg = origMapX = parseFloat($('#home-map svg')[0].getAttribute('viewBox').split(' ')[0]);
+	mapY = mapYTarg = origMapY = parseFloat($('#home-map svg')[0].getAttribute('viewBox').split(' ')[1]);
+	mapW = mapWTarg = origMapW = parseFloat($('#home-map svg')[0].getAttribute('viewBox').split(' ')[2]);
+	mapH = mapHTarg = origMapH = parseFloat($('#home-map svg')[0].getAttribute('viewBox').split(' ')[3]);
+	console.log(mapX,mapY,mapW,mapH);
+
+
+
+	if (navigator.userAgent.match(/iPad;.*CPU.*OS 7_\d/i)) {
+    	$('html').addClass('ipad ios7');
+	}
+
+	if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || $(window).width()<800 ) {
  		// some code..
  		var routeNames = [
-							["commuter",[293, 444, 1998, 456]], 
-							["placerville",[1864, 342, 438, 449]], 
-							["cameronpark",[1317, 444, 285, 367]], 
-							["fiftyX",[764, 457, 1200, 370]],
- 						    ["pollockpines",[1914, 235, 821, 537]],
- 						    ["diamondsprings",[1766, 440, 419, 603]]
- 						  ];
+							"commuter",  
+							"placerville", 
+							"cameron-park", 
+							"50X",
+							"pollock-pines",
+							"diamond-springs"
+ 						 ];
+ 						  
+ 		routeBounds = [];
+ 		
+ 		for(var i = 0; i<routeNames.length; i++) {
+ 			var $routePath = $('#solid-overs ').find('*[id*='+routeNames[i]+']');
+ 			routeBounds.push($routePath[0].getBBox());
+ 			
+ 		};
  						  
  		console.log(routeNames);
  		
@@ -92,50 +147,70 @@ jQuery(document).ready(function($) {
 	var distance = $('#home-map').offset().top,
     $window = $(window);
     var mapPadding = 0;
-    var mapScrollArea = 400;
-    var mapScrollPieceSize = mapScrollArea/routeNames.length;
-    origMapHeight = $('#home-map').height();
-	
+    
+   
+    origMapHeight = $('#home-map-inner').height();
+	$('#home-map-spacer').css('height',$('#home-map-inner').height());
 	$('#home-map').css('height',origMapHeight);
+	var mapScrollArea = $('#home-map-spacer').height()/1.5;
+	 var mapScrollPieceSize = $('#map-legend li:first').outerHeight();
+	 var paddingBetweenMapAndLegend = parseInt($('#map-legend').css('margin-top').replace('px',''));
+	 $('#home-map svg').attr('height',origMapHeight);
 	//$('#home-map svg').attr('height',origMapHeight);
 	//$('#home-map svg').attr('width',$('#home-map').width());
 	
 	$window.scroll(function() {
 		var found = false;
+		var above = false;
 		hideHighlights();
 		for(var i = 0; i<routeNames.length; i++) {
-			if ( $window.scrollTop() >= (distance-mapPadding+(i*mapScrollPieceSize)) &&  $window.scrollTop() < distance-mapPadding+((i+1)*mapScrollPieceSize)) {
-				setMapBounds(routeNames[i][1]);
-				showHighlight(routeNames[i][0]);
-				console.log('200!!!!!: '+routeNames[i][1][0]);
+			if ( $window.scrollTop() >= (distance + paddingBetweenMapAndLegend -mapPadding+(i*mapScrollPieceSize)) &&  $window.scrollTop() < distance+paddingBetweenMapAndLegend-mapPadding+((i+1)*mapScrollPieceSize)) {
+				setMapBounds(routeBounds[i]);
+				showHighlight(routeNames[i]);
 				found = true;
-				$('#home-map-spacer').css('height', 10000);//$window.scrollTop() - 	distance + origMapHeight);
+				//$('#home-map-spacer').css('height', 10000);//$window.scrollTop() - 	distance + origMapHeight);
 				$('#home-map svg').attr('height',origMapHeight);
-			//	$('#home-map svg').attr('width',$('#home-map').width());
-			}
+				$('#home-map svg').attr('width',$('#home-map').width());
+				$('#home-map-inner').css('opacity',1);
+			} else if ($window.scrollTop() > distance+paddingBetweenMapAndLegend-mapPadding+((i+1)*mapScrollPieceSize)) {
+				$('#home-map-inner').css('opacity',0);
+				above = true;
+			} else {
+				$('#home-map-inner').css('opacity',1);
+			}	
 		}
-		if(!found) {
-			resetMapBounds();
+		
+		if(found || ($window.scrollTop() >= distance && $window.scrollTop() < distance + mapScrollArea)){
+			$('#home-map').addClass('top-fixed');
+			$('#planner-holder').addClass('hidden'); 
+		} else if(!above){
 			$('#home-map').removeClass('top-fixed');
+			$('#planner-holder').removeClass('hidden'); 
+		}
+		if(!found && !above) {
+			
+			
 			floatingMap = false;	
-			$('#home-map svg').removeAttr('height');
-			$('#home-map svg').removeAttr('width');		
-			$('#home-map').css('height',origMapHeight);
-			$('#home-map-spacer').css('height', 0)
+			//$('#home-map svg').removeAttr('height');
+			//$('#home-map svg').removeAttr('width');		
+			//$('#home-map').css('height',origMapHeight);
+			//$('#home-map-spacer').css('height', 0)			
 			//$('#home-map svg').attr('height',origMapHeight);
 			$('#stroke-paths').css('opacity',1);
 			$('#paths-expanded').css('opacity',1);
+			resetMapBounds();
 		} else {
-			$('#home-map').addClass('top-fixed');
+			
 			floatingMap = true;
 			$('#stroke-paths').css('opacity',.3);
 			$('#paths-expanded').css('opacity',.3);
+			
 		}
 	});
  		
  		// find hiegh of top of map
  		//$('#').offset().top 
-	//}
+	}
 	
 	
 
@@ -164,18 +239,19 @@ jQuery(document).ready(function($) {
 		}		
 	});
 	
+	$('#hovers_1_').find('polygon, path').on('click', function() {
 	
-	// set up table/mobile map scroll behavior
+		if(!floatingMap){
+			var routeName = $(this).attr('id').split('_')[0];
+			var getUrl = window.location;
+			window.location = getUrl .protocol + "//" + getUrl.host + "/" + getUrl.pathname.split('/')[1] + '/routes/'+routeName;
+		}
+		
+	});
 	
-/*	var $map = $("svg").svgPanZoom(
-		{options:{limits: { // the limits in which the image can be moved. If null or undefined will use the initialViewBox plus 15% in each direction
-			x: 0,
-			y: 0,
-			x2: 900,
-			y2: 600
-   		 }}});
-	var zoomElem = $('fiftyX_x5F_1_2_');
-	$map.setViewBox(100, 100, 400, 400, 1);*/
+	 window.setInterval(function() {
+  		updateMap();
+	}, 13);
 	
 });
 
