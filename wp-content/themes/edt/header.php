@@ -11,9 +11,12 @@
 	
 	<?php
 	wp_head(); 
+	
+	
 	?>
+	
 </head>
-<body class="main-blue-grad-bg">
+<body <?php body_class( $class ); ?> >
 <?php 
 include_once("wp-content/themes/edt/library/svg/icon-defs.svg"); ?>
 <?php

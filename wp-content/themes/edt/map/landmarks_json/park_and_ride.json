@@ -1,0 +1,186 @@
+[
+  {
+    "id":"landmark_8",
+    "name":"Cloverdale Park and Ride",
+    "details":" Asti Road/Citrus Fair Dr.  <br> Just East of Hwy. 101 and South of Citrus Fair.  <br> 90 Spaces and Bike Rack available <br> ",
+    "lat":38.799239,
+    "lon":-123.011539,
+    "category":"Park and Ride"
+  },
+  {
+    "id":"landmark_9",
+    "name":"Geyserville Park and Ride",
+    "details":" Hwy. 128/Remmel Rd.   <br> One block East of Geyserville Ave. <br> 16 Spaces available <br> ",
+    "lat":38.707172,
+    "lon":-122.902422,
+    "category":"Park and Ride"
+  },
+  {
+    "id":"landmark_10",
+    "name":"Healdsburg Park and Ride",
+    "details":" Healdsburg Ave./Grant Ave   <br> Just Northeast of Hwy. 101 <br> 70 Spaces available <br> ",
+    "lat":38.596931,
+    "lon":-122.853611,
+    "category":"Park and Ride"
+  },
+  {
+    "id":"landmark_11",
+    "name":"North Windsor Park and Ride",
+    "details":" Old Redwood Hwy./Starr Rd   <br> Just Northwest of new Hwy. 101 on-ramp <br> Adjacent to Windsor School District bus yard. <br> 40 Spaces available <br> ",
+    "lat":38.565903,
+    "lon":-122.831039,
+    "category":"Park and Ride"
+  },
+  {
+    "id":"landmark_12",
+    "name":"Windsor Park and Ride",
+    "details":" Windsor Rd./Windsor River Rd. <br> 94 Spaces available <br> ",
+    "lat":38.547856,
+    "lon":-122.816822,
+    "category":"Park and Ride"
+  },
+  {
+    "id":"landmark_13",
+    "name":"Fulton Park and Ride",
+    "details":" River Rd./Hwy. 101 <br>  Just Northwest of Hwy. 101 on-ramp-off-ramp. <br> Adjacent to Pacific Gas and Electric substation <br> 20 Spaces available <br> ",
+    "lat":38.496617,
+    "lon":-122.761222,
+    "category":"Park and Ride"
+  },
+  {
+    "id":"landmark_14",
+    "name":"Santa Rosa Park and Ride",
+    "details":"Piner Rd./Industrial Way <br>  West of Hwy. 101 on Piner Rd.  <br> Adjacent to Golden Gate Transit bus yard.  <br> 90 Spaces available <br> ",
+    "lat":38.472267,
+    "lon":-122.740342,
+    "category":"Park and Ride"
+  },
+  {
+    "id":"landmark_15",
+    "name":"Santa Rosa Park and Ride",
+    "details":"Hwy. 12/Brookwood Ave. <br>  Just North of County Fairgrounds under bridge  <br> Overflow parking available at Veterans Building.  <br> 215 Spaces available <br> ",
+    "lat":38.433344,
+    "lon":-122.699419,
+    "category":"Park and Ride"
+  },
+  {
+    "id":"landmark_16",
+    "name":"Sebastopol Park and Ride",
+    "details":"Petaluma Ave./Burnett St. <br>  Just South of Hwy. 12. <br> 40 Spaces available <br> ",
+    "lat":38.401533,
+    "lon":-122.822406,
+    "category":"Park and Ride"
+  },
+  {
+    "id":"landmark_17",
+    "name":"Guernville Park and Ride",
+    "details":"Hwy. 116/Mill St <br> Just Northwest of downtown Safeway. <br> Across from Fifes Resort. <br> 60 Spaces available <br> ",
+    "lat":38.502264,
+    "lon":-123.003036,
+    "category":"Park and Ride"
+  },
+  {
+    "id":"landmark_18",
+    "name":"Occidental Park and Ride",
+    "details":"Bohemian Hwy./Graton Rd <br> Two lots; one just North of Fire Department <br> and the other just East of Community Center. <br> 25 Spaces available <br> ",
+    "lat":38.409578,
+    "lon":-122.948617,
+    "category":"Park and Ride"
+  },
+  {
+    "id":"landmark_19",
+    "name":"Rohnert Park Park and Ride",
+    "details":"Roberts Lake Rd./Golf Course Dr. <br> Just West of Marys Pizza and East of Hwy. 101. <br> 180 Spaces available <br> ",
+    "lat":38.364811,
+    "lon":-122.711467,
+    "category":"Park and Ride"
+  },
+  {
+    "id":"landmark_20",
+    "name":"Rohnert Park Park and Ride",
+    "details":"Rohnert Park Expressway/Hwy. 101. <br> Within southbound on-ramp area South of bridge. <br> 150 Spaces available <br> ",
+    "lat":38.347619,
+    "lon":-122.713761,
+    "category":"Park and Ride"
+  },
+  {
+    "id":"landmark_21",
+    "name":"Rohnert Park Park and Ride",
+    "details":"Rohnert Park Expressway/Hwy. 101. <br> Within northbound on-ramp area North of bridge. <br> 180 Spaces available <br> ",
+    "lat":38.349258,
+    "lon":-122.712228,
+    "category":"Park and Ride"
+  },
+  {
+    "id":"landmark_22",
+    "name":"Cotati Park and Ride",
+    "details":"St. Joseph Way/Old Redwood Hwy. <br> Just East of Hwy. 101 and North of Hwy. 116. <br> 185 Spaces available <br> ",
+    "lat":38.330292,
+    "lon":-122.711561,
+    "category":"Park and Ride"
+  },
+  {
+    "id":"landmark_23",
+    "name":"Cotati Park and Ride",
+    "details":"Redwood Dr./Hwy. 116. <br> Just South of gas station and West of Hwy. 116. <br> 83 Spaces available <br> ",
+    "lat":38.330772,
+    "lon":-122.7153,
+    "category":"Park and Ride"
+  },
+  {
+    "id":"landmark_24",
+    "name":"Penngrove Park and Ride",
+    "details":"Old Redwood Hwy./Petaluma Hill Rd. <br> Just South of Penngrove Fire Department. <br> 30 Spaces available <br> ",
+    "lat":38.294153,
+    "lon":-122.666625,
+    "category":"Park and Ride"
+  },
+  {
+    "id":"landmark_25",
+    "name":"Boyes Hot Springs Park and Ride",
+    "details":"Hwy. 12/Thomson Av. <br> Just Northeast of signalized intersection. <br> 10 Spaces available <br> ",
+    "lat":38.310136,
+    "lon":-122.479189,
+    "category":"Park and Ride"
+  },
+  {
+    "id":"landmark_26",
+    "name":"Schellville Park and Ride",
+    "details":"Arnold Dr. (Hwy. 116)/Fremont Dr.  <br> Just Southeast of intersection. <br> 50 Spaces available <br> ",
+    "lat":38.236075,
+    "lon":-122.461089,
+    "category":"Park and Ride"
+  },
+  {
+    "id":"landmark_27",
+    "name":"Petaluma Park and Ride",
+    "details":"North Petaluma Blvd./Gassage Ave. <br> Just Northwest of Outlet Mall. <br> Along side street directly West of N. Petaluma Blvd. <br> 20 Spaces available <br> ",
+    "lat":38.256608,
+    "lon":-122.654111,
+    "category":"Park and Ride"
+  },
+  {
+    "id":"landmark_28",
+    "name":"Petaluma Park and Ride",
+    "details":"Washington St./Payran St. <br> Just North of Sonoma-Marin Fairgrounds and <br> East of Sonoma County Regional Library. <br> 600 Spaces available <br> ",
+    "lat":38.243258,
+    "lon":-122.630008,
+    "category":"Park and Ride"
+  },
+  {
+    "id":"landmark_29",
+    "name":"Petaluma Park and Ride",
+    "details":"Lakeville St.(Hwy.116)/Hwy. 101. <br> Within South bound on-ramp north of bridge. <br> 145 Spaces available <br> ",
+    "lat":38.234464,
+    "lon":-122.619267,
+    "category":"Park and Ride"
+  },
+  {
+    "id":"landmark_30",
+    "name":"Petaluma Park and Ride",
+    "details":"South Petaluma Blvd./Hwy. 101 <br> Just East of the Northbound off-ramp area. <br> 40 Spaces available <br> ",
+    "lat":38.234128,
+    "lon":-122.617383,
+    "category":"Park and Ride"
+  }
+]

@@ -1,0 +1,1 @@
+jQuery(document).ready(function($){$("#map-toggle-tiles a").click(function(){$(this).toggleClass("toggled")})});

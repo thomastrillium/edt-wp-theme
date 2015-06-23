@@ -1,0 +1,418 @@
+.route-60-small {
+  background-position: -100px -500px;
+  display: inline-block;
+  background-image: url("icons/sprite-sheet.png");
+  background-repeat: no-repeat;
+  width: 32px;
+  height: 32px; }
+
+.route-60X-small {
+  background-position: -100px -550px;
+  display: inline-block;
+  background-image: url("icons/sprite-sheet.png");
+  background-repeat: no-repeat;
+  width: 32px;
+  height: 32px; }
+
+.route-62-small {
+  background-position: -100px -600px;
+  display: inline-block;
+  background-image: url("icons/sprite-sheet.png");
+  background-repeat: no-repeat;
+  width: 32px;
+  height: 32px; }
+
+.route-66-small {
+  background-position: -100px -650px;
+  display: inline-block;
+  background-image: url("icons/sprite-sheet.png");
+  background-repeat: no-repeat;
+  width: 32px;
+  height: 32px; }
+
+.route-68-small {
+  background-position: -200px -500px;
+  display: inline-block;
+  background-image: url("icons/sprite-sheet.png");
+  background-repeat: no-repeat;
+  width: 32px;
+  height: 32px; }
+
+.route-10-small {
+  background-position: -200px -550px;
+  display: inline-block;
+  background-image: url("icons/sprite-sheet.png");
+  background-repeat: no-repeat;
+  width: 32px;
+  height: 32px; }
+
+.route-10T-small {
+  background-position: -200px -600px;
+  display: inline-block;
+  background-image: url("icons/sprite-sheet.png");
+  background-repeat: no-repeat;
+  width: 32px;
+  height: 32px; }
+
+.route-12-small {
+  background-position: -200px -650px;
+  display: inline-block;
+  background-image: url("icons/sprite-sheet.png");
+  background-repeat: no-repeat;
+  width: 32px;
+  height: 32px; }
+
+.route-12T-small {
+  background-position: -300px -500px;
+  display: inline-block;
+  background-image: url("icons/sprite-sheet.png");
+  background-repeat: no-repeat;
+  width: 32px;
+  height: 32px; }
+
+.route-14-small {
+  background-position: -300px -550px;
+  display: inline-block;
+  background-image: url("icons/sprite-sheet.png");
+  background-repeat: no-repeat;
+  width: 32px;
+  height: 32px; }
+
+.route-14T-small {
+  background-position: -300px -600px;
+  display: inline-block;
+  background-image: url("icons/sprite-sheet.png");
+  background-repeat: no-repeat;
+  width: 32px;
+  height: 32px; }
+
+.route-40-small {
+  background-position: -300px -650px;
+  display: inline-block;
+  background-image: url("icons/sprite-sheet.png");
+  background-repeat: no-repeat;
+  width: 32px;
+  height: 32px; }
+
+.route-42-small {
+  background-position: -400px -500px;
+  display: inline-block;
+  background-image: url("icons/sprite-sheet.png");
+  background-repeat: no-repeat;
+  width: 32px;
+  height: 32px; }
+
+.route-44-small {
+  background-position: -400px -550px;
+  display: inline-block;
+  background-image: url("icons/sprite-sheet.png");
+  background-repeat: no-repeat;
+  width: 32px;
+  height: 32px; }
+
+.route-46-small {
+  background-position: -400px -600px;
+  display: inline-block;
+  background-image: url("icons/sprite-sheet.png");
+  background-repeat: no-repeat;
+  width: 32px;
+  height: 32px; }
+
+.route-48-small {
+  background-position: -400px -650px;
+  display: inline-block;
+  background-image: url("icons/sprite-sheet.png");
+  background-repeat: no-repeat;
+  width: 32px;
+  height: 32px; }
+
+.route-48X-small {
+  background-position: -500px -500px;
+  display: inline-block;
+  background-image: url("icons/sprite-sheet.png");
+  background-repeat: no-repeat;
+  width: 32px;
+  height: 32px; }
+
+.route-30-small {
+  background-position: -500px -550px;
+  display: inline-block;
+  background-image: url("icons/sprite-sheet.png");
+  background-repeat: no-repeat;
+  width: 32px;
+  height: 32px; }
+
+.route-30X-small {
+  background-position: -500px -600px;
+  display: inline-block;
+  background-image: url("icons/sprite-sheet.png");
+  background-repeat: no-repeat;
+  width: 32px;
+  height: 32px; }
+
+.route-32-small {
+  background-position: -500px -650px;
+  display: inline-block;
+  background-image: url("icons/sprite-sheet.png");
+  background-repeat: no-repeat;
+  width: 32px;
+  height: 32px; }
+
+.route-34-small {
+  background-position: -600px -450px;
+  display: inline-block;
+  background-image: url("icons/sprite-sheet.png");
+  background-repeat: no-repeat;
+  width: 32px;
+  height: 32px; }
+
+.route-34X-small {
+  background-position: -600px -500px;
+  display: inline-block;
+  background-image: url("icons/sprite-sheet.png");
+  background-repeat: no-repeat;
+  width: 32px;
+  height: 32px; }
+
+.route-38-small {
+  background-position: -600px -550px;
+  display: inline-block;
+  background-image: url("icons/sprite-sheet.png");
+  background-repeat: no-repeat;
+  width: 32px;
+  height: 32px; }
+
+.route-20-small {
+  background-position: -600px -600px;
+  display: inline-block;
+  background-image: url("icons/sprite-sheet.png");
+  background-repeat: no-repeat;
+  width: 32px;
+  height: 32px; }
+
+.route-22X-small {
+  background-position: -600px -650px;
+  display: inline-block;
+  background-image: url("icons/sprite-sheet.png");
+  background-repeat: no-repeat;
+  width: 32px;
+  height: 32px; }
+
+.route-20X-small {
+  background-position: -700px -450px;
+  display: inline-block;
+  background-image: url("icons/sprite-sheet.png");
+  background-repeat: no-repeat;
+  width: 32px;
+  height: 32px; }
+
+.route-22-small {
+  background-position: -700px -500px;
+  display: inline-block;
+  background-image: url("icons/sprite-sheet.png");
+  background-repeat: no-repeat;
+  width: 32px;
+  height: 32px; }
+
+.route-24-small {
+  background-position: -700px -550px;
+  display: inline-block;
+  background-image: url("icons/sprite-sheet.png");
+  background-repeat: no-repeat;
+  width: 32px;
+  height: 32px; }
+
+.route-26-small {
+  background-position: -700px -600px;
+  display: inline-block;
+  background-image: url("icons/sprite-sheet.png");
+  background-repeat: no-repeat;
+  width: 32px;
+  height: 32px; }
+
+.route-28-small {
+  background-position: -700px -650px;
+  display: inline-block;
+  background-image: url("icons/sprite-sheet.png");
+  background-repeat: no-repeat;
+  width: 32px;
+  height: 32px; }
+
+.route-29A-small {
+  background-position: -800px -500px;
+  display: inline-block;
+  background-image: url("icons/sprite-sheet.png");
+  background-repeat: no-repeat;
+  width: 32px;
+  height: 32px; }
+
+.route-29B-small {
+  background-position: -800px -550px;
+  display: inline-block;
+  background-image: url("icons/sprite-sheet.png");
+  background-repeat: no-repeat;
+  width: 32px;
+  height: 32px; }
+
+.route-28A-small {
+  background-position: -800px -600px;
+  display: inline-block;
+  background-image: url("icons/sprite-sheet.png");
+  background-repeat: no-repeat;
+  width: 32px;
+  height: 32px; }
+
+.route-28B-small {
+  background-position: -800px -650px;
+  display: inline-block;
+  background-image: url("icons/sprite-sheet.png");
+  background-repeat: no-repeat;
+  width: 32px;
+  height: 32px; }
+
+.route-10S-small {
+  background-position: -900px -500px;
+  display: inline-block;
+  background-image: url("icons/sprite-sheet.png");
+  background-repeat: no-repeat;
+  width: 32px;
+  height: 32px; }
+
+.route-12S-small {
+  background-position: -900px -550px;
+  display: inline-block;
+  background-image: url("icons/sprite-sheet.png");
+  background-repeat: no-repeat;
+  width: 32px;
+  height: 32px; }
+
+.route-48S-small {
+  background-position: -900px -600px;
+  display: inline-block;
+  background-image: url("icons/sprite-sheet.png");
+  background-repeat: no-repeat;
+  width: 32px;
+  height: 32px; }
+
+.route-60S-small {
+  background-position: -900px -650px;
+  display: inline-block;
+  background-image: url("icons/sprite-sheet.png");
+  background-repeat: no-repeat;
+  width: 32px;
+  height: 32px; }
+
+.search-icon {
+  background-position: -600px -400px;
+  width: 11px;
+  height: 11px;
+  display: inline-block;
+  background-image: url("icons/sprite-sheet.png");
+  background-repeat: no-repeat; }
+
+.fancy-route-row {
+  width: 340px;
+  height: 45px;
+  outline: 1px solid #d9e0e7;
+  cursor: pointer;
+  font-family: Helvetica, Arial, sans-serif;
+  margin-top: 5px;
+  position: relative; }
+  .fancy-route-row.selected {
+    border: 1px solid #e9f6fc;
+    background: #e9f6fc;
+    width: 338px; }
+  .fancy-route-row .search-icon {
+    position: absolute;
+    right: 5px;
+    bottom: 10px; }
+  .fancy-route-row .route-icon {
+    margin-top: 7px;
+    margin-left: 5px; }
+  .fancy-route-row .title {
+    max-width: 295px;
+    color: #949ba3;
+    font-size: 12px;
+    display: inline-block;
+    vertical-align: 5px; }
+    .fancy-route-row .title.double {
+      vertical-align: -1px !important; }
+  .fancy-route-row a {
+    display: block;
+    width: 100px;
+    font-size: 10px;
+    font-weight: light;
+    color: #214189;
+    text-decoration: none; }
+     .fancy-route-row a:hover {
+     text-decoration: underline;
+     }
+
+.select-all-button {
+  margin: 0;
+  padding-top: 15px;
+  font-family: Helvetica, Arial, sans-serif;
+  outline: 1px solid #d9e0e7;
+  height: 30px;
+  width: 166px;
+  color: #214189;
+  font-size: 14px;
+  font-weight: light;
+  text-align: center;
+  display: inline-block;
+  cursor: pointer; }
+  .select-all-button:hover {
+    color: #6387c4; }
+
+h1.services {
+  font-size: 24px;
+  font-family: Helvetica, Arial, sans-serif;
+  color: #6387c4;
+  margin-bottom: 15px; }
+
+#top-key {
+  background: white;
+  width: 350px;
+  height: 165px;
+  position: fixed;
+  top: 0;
+  padding: 10px; }
+
+	.instructions {
+		margin-left: 20px;
+		font-size: 12px;
+		color: #214189;
+	}
+	.instructions-first {
+		margin-top: 10px;
+	}	
+
+#bottom-key {
+  position: fixed;
+  bottom: 0;
+  height: 80px;
+  width: 361px;
+  background: white;
+  z-index: 1;
+  padding: 5px; }
+  #bottom-key .filter-icon {
+    text-align: center;
+    cursor: pointer;
+    float: left;
+    margin-right: 4px;
+    border: 1px solid #d9e0e7;
+    color: #214189;
+    font-size: 12px;
+    width: 65px;
+    height: 75px; }
+    #bottom-key .filter-icon input {
+    /*  display: none;*/
+		position: absolute;
+		top: -10000px
+	 }
+    #bottom-key .filter-icon span {
+      display: block; }
+    #bottom-key .filter-icon:hover {
+      color: #6387c4; }
+    #bottom-key .filter-icon.selected {
+      background: #e9f6fc; }

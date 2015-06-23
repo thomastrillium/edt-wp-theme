@@ -3,7 +3,8 @@ get_header();
 get_template_part('template-header');
 get_template_part('planner');
 get_template_part('home-map'); 
-get_template_part('legend');
+//get_template_part('legend');
+
 
 // do home pagey stuff like pull in image 
 ?>
@@ -16,11 +17,7 @@ get_template_part('legend');
 <div id="home-banner-holder" class="centered strd-width" >
 	<img src="<?php echo get_template_directory_uri(); ?>/library/images/home-banner-temp.jpg" width="100%"/>
 </div><!-- end home-banner-holder -->
-<div id="social-and-other-links" class="centered strd-width">
-	<svg id="facebook-home-link"> <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#facebook-svg" ></use></svg>
-	<svg id="twitter-home-link"> <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#twitter-svg" ></use></svg>
-	<svg id="youtube-home-link"> <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#youtube-svg" ></use></svg>
-</div><!-- end "social-and-other-links" -->
+
 <div id="home-page-quote-holder" class="centered strd-width ">
 	 <div class="inner">
 	 	<div id="home-page-quote">"<?php echo esc_attr( get_option('home_quote') ); ?>"</div>
@@ -29,6 +26,18 @@ get_template_part('legend');
 	 <br style="clear: both;" />
 </div><!-- end home-page-quote -->
 <div id="dark-home-bg" class="full-width">
+<div id="social-and-other-links" class="centered strd-width">
+	<div id="social-icons-holder-home">
+		<?php get_template_part('social-icons'); ?>
+	</div><!-- id="social-icons-holder-home" -->
+	<div id="route-shout-home">
+		Get Real-time updates with 
+		<a href="http://m.routeshout.com/"><svg> <use xlink:href="#routeshout-2" /></svg></a>
+	</div><!-- end #route-shout-home -->
+	<a id="newsletter-link">
+		Sign up for our newsletter
+	</a><!-- newsletter-signup -->
+</div><!-- end "social-and-other-links" -->
 <div id="home-links-holder" class="centered strd-width" >
 	<?php get_template_part('footer-links-1'); ?>
 	<br style="clear: both;" />

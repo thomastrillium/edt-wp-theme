@@ -18,6 +18,7 @@
 		?>
 		<br style="clear;" />
 		<div id="home-map-bottom-border" class="centered max-width" ></div>
+	<?php	get_template_part('desktop-legend'); ?>
 	</div><!-- end home-map-inner -->
 	
 </div>

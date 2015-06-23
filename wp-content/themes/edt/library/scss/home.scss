@@ -141,3 +141,80 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#13253b', end
 
 	}
 }
+
+#social-icons-holder-home {
+	margin-top: 30px;
+	svg {
+		height: 35px;
+	}
+}
+
+#social-and-other-links{
+	overflow: hidden;
+}
+
+
+#social-icons-holder-home {
+	float: left;
+}
+#route-shout-home {
+	
+	float: left;
+	color: white;
+	margin-top: 30px;	
+	margin-left: 5%;
+	text-transform: uppercase;
+	width: 45%;
+	svg {
+		width: 25%;
+		vertical-align: middle;
+		height: 40PX;
+		width: 140px;
+		margin-left: 2%;
+	 
+	}
+}
+.home {
+
+	#social-icons-holder-home {
+		width:15%;
+	}
+	a#newsletter-link {
+		display: block;
+		width: 30%;
+
+		float: right; 
+		background:#2970ce;
+		padding: 6px;
+		text-transform: uppercase;
+		font-size: .86em;
+		color: rgba(255,255,255,.8);
+		text-align: center;
+		margin-top: 35px;
+		margin-left: 2%;
+		border: #8fb7e6 1px solid;
+	}
+	a#newsletter-link:hover  {
+		background-color:lighten(#2970ce,5);
+		cursor: pointer;
+	}
+}
+@media (max-width: $responsive-med) {
+	#social-and-other-links > div,	#social-and-other-links > a#newsletter-link,
+	#social-and-other-links #social-icons-holder-home{
+		display: block;
+		width: 100%;
+		clear: both;
+		float: none;
+		margin: 0;
+		text-align: center;
+		margin-top: 20px;
+	}
+}
+
+
+#routeshout-2 {
+		path {
+			fill: white;
+		}
+	}

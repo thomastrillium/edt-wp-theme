@@ -1,0 +1,34 @@
+[
+  {
+    "id":"landmark_41",
+    "name":"Cloverdale Depot",
+    "details":"The Cloverdale Depot. <br><img src=\"http://www.sctransit.com/kmz/images/cloverdale.jpg\" width=450 height=338>",
+    "lat":38.798539,
+    "lon":-123.011769,
+    "category":"Transit Hubs"
+  },
+  {
+    "id":"landmark_42",
+    "name":"Santa Rosa Transit Depot",
+    "details":"The Santa Rosa Transit Depot.<br> <br><img src=\"http://www.sctransit.com/kmz/images/TransitMall.jpg\" width=450 height=299>",
+    "lat":38.438956,
+    "lon":-122.71315,
+    "category":"Transit Hubs"
+  },
+  {
+    "id":"landmark_43",
+    "name":"Windsor Depot",
+    "details":"The Windsor Depot. <br> Located in the Windsor Chamber of Commerce.<br> <br><img src=\"http://www.sctransit.com/kmz/images/WindsorDepot2.jpg\" width=450 height=300>",
+    "lat":38.547856,
+    "lon":-122.816794,
+    "category":"Transit Hubs"
+  },
+  {
+    "id":"landmark_44",
+    "name":"Petaluma Transit Mall",
+    "details":"The Petaluma Depot..<br> <br><img src=\"http://www.sctransit.com/kmz/images/PetalumaTransitMall2.jpg\" width=252 height=300>",
+    "lat":38.236244,
+    "lon":-122.635756,
+    "category":"Transit Hubs"
+  }
+]

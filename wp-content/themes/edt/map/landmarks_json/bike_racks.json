@@ -1,0 +1,58 @@
+[
+  {
+    "id":"landmark_1",
+    "name":"Cloverdale City Hall",
+    "details":"124 N. Cloverdale Boulevard  <br> Cloverdale, CA <br>",
+    "lat":38.806269,
+    "lon":-123.017544,
+    "category":"Bike Racks"
+  },
+  {
+    "id":"landmark_2",
+    "name":"Santa Rosa Transit Depot",
+    "details":"The Santa Rosa Transit Depot.<br> <br><img src=\"http://www.sctransit.com/kmz/images/SantaRosaTransitMall.jpg\" width=450 height=292>",
+    "lat":38.438956,
+    "lon":-122.71315,
+    "category":"Bike Racks"
+  },
+  {
+    "id":"landmark_3",
+    "name":"Windsor Depot",
+    "details":"The Windsor Depot. <br> Located in the Windsor Chamber of Commerce.<br> <br><img src=\"http://www.sctransit.com/kmz/images/WindsorDepot2.jpg\" width=450 height=300>",
+    "lat":38.547856,
+    "lon":-122.816794,
+    "category":"Bike Racks"
+  },
+  {
+    "id":"landmark_4",
+    "name":"Healdsburg Park and Ride",
+    "details":" Healdsburg Ave./Grant Ave   <br> Just Northeast of Hwy. 101 <br> 70 Spaces available <br> ",
+    "lat":38.596931,
+    "lon":-122.853611,
+    "category":"Bike Racks"
+  },
+  {
+    "id":"landmark_5",
+    "name":"Santa Rosa Park and Ride",
+    "details":"Hwy. 12/Brookwood Ave. <br>  Just North of County Fairgrounds under bridge  <br> Overflow parking available at Veterans Building.  <br> 215 Spaces available <br> ",
+    "lat":38.433344,
+    "lon":-122.699419,
+    "category":"Bike Racks"
+  },
+  {
+    "id":"landmark_6",
+    "name":"Guernville Park and Ride",
+    "details":"Hwy. 116/Mill St <br> Just Northwest of downtown Safeway. <br> Across from Fifes Resort. <br> 60 Spaces available <br> ",
+    "lat":38.502264,
+    "lon":-123.003036,
+    "category":"Bike Racks"
+  },
+  {
+    "id":"landmark_7",
+    "name":"Cloverdale Depot",
+    "details":"Asti Road /Citrus Fair Dr. <br> Cloverdale Depot",
+    "lat":38.798286,
+    "lon":-123.0116,
+    "category":"Bike Racks"
+  }
+]

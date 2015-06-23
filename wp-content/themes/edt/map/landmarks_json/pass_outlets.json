@@ -1,0 +1,74 @@
+[
+  {
+    "id":"landmark_31",
+    "name":"SAFEWAY Sebastopol",
+    "details":"406 N. Main Street <br> Sebastopol CA <br><br>",
+    "lat":38.404506,
+    "lon":-122.826603,
+    "category":"Pass Outlets"
+  },
+  {
+    "id":"landmark_32",
+    "name":"SAFEWAY Guerneville",
+    "details":"16405 River Road <br> Guerneville CA <br> <br>",
+    "lat":38.501497,
+    "lon":-123.000928,
+    "category":"Pass Outlets"
+  },
+  {
+    "id":"landmark_33",
+    "name":"Cloverdale City Hall",
+    "details":"124 N. Cloverdale Boulevard  <br> Cloverdale, CA",
+    "lat":38.806269,
+    "lon":-123.017544,
+    "category":"Pass Outlets"
+  },
+  {
+    "id":"landmark_34",
+    "name":"Sonoma Valley Visitors",
+    "details":"453 First Street East <br> Sonoma CA",
+    "lat":38.292625,
+    "lon":-122.45655,
+    "category":"Pass Outlets"
+  },
+  {
+    "id":"landmark_35",
+    "name":"Windsor Chamber of Commerce",
+    "details":"The Windsor Depot. <br> Located in the Windsor Chamber of Commerce.<br> <br><img src=\"http://www.sctransit.com/kmz/images/WindsorDepot2.jpg\" width=450 height=300>",
+    "lat":38.547219,
+    "lon":-122.817303,
+    "category":"Pass Outlets"
+  },
+  {
+    "id":"landmark_36",
+    "name":"Raleys Town Center Rohnert Park CA",
+    "details":" 31-Day Passes for all passenger fare-types <br> Student 1-Zone Fast Passes are also available  <br> 100 Raleys Towne Ctr.Rohnert Park CA <br> ",
+    "lat":38.346586,
+    "lon":-122.706181,
+    "category":"Pass Outlets"
+  },
+  {
+    "id":"landmark_38",
+    "name":"SAFEWAY Santa Rosa",
+    "details":"2300 Mendocino Ave. <br> Santa Rosa CA   <br><br>",
+    "lat":38.4632,
+    "lon":-122.717375,
+    "category":"Pass Outlets"
+  },
+  {
+    "id":"landmark_39",
+    "name":"SAFEWAY Petaluma",
+    "details":"373 S. McDowell Blvd. <br> Petaluma CA <br> to the < <br><br>",
+    "lat":38.248658,
+    "lon":-122.622497,
+    "category":"Pass Outlets"
+  },
+  {
+    "id":"landmark_40",
+    "name":"SAFEWAY Santa Rosa",
+    "details":"100 Calistoga Road <br> Santa Rosa CA <br><Santa Rosa CA",
+    "lat":38.465739,
+    "lon":-122.652258,
+    "category":"Pass Outlets"
+  }
+]

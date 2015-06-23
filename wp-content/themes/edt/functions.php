@@ -1,5 +1,7 @@
 <?php // hello edt 
 
+add_theme_support( 'post-thumbnails' ); 
+
 $labels = array(
 		'name'               => _x( 'Routes &amp; Schedules', 'post type general name' ),
 		'singular_name'      => _x( 'route', 'post type singular name' ),
@@ -93,6 +95,8 @@ function my_jquery_enqueue() {
 function edt_add_stylesheets() {
         wp_enqueue_style( 'google-fonts-karla', 'http://fonts.googleapis.com/css?family=Karla:400,400italic,700,700italic'  );
         wp_enqueue_style( 'main-stylesheet', get_template_directory_uri().'/library/css/style.css'  );
+        wp_enqueue_style( 'jquery-ui-stylesheet', get_template_directory_uri() . '/library/js/jquery-ui-1.11.4/jquery-ui.min.css'  );
+        wp_enqueue_style( 'jquery-ui-stylesheet-smoothness', 'http://code.jquery.com/ui/1.11.0/themes/smoothness/jquery-ui.css'  );
       
     
 		wp_enqueue_script(
@@ -103,7 +107,7 @@ function edt_add_stylesheets() {
 		wp_enqueue_script(
 			'planner-functionality',
 			get_stylesheet_directory_uri() . '/library/js/planner.js',
-			array( 'edt_jquery' )
+			array( 'edt_jquery', 'google_places' )
 		);
 		wp_enqueue_script(
 			'map-interactivity',
@@ -127,6 +131,35 @@ function edt_add_stylesheets() {
 			get_stylesheet_directory_uri() . '/library/js/nav.js',
 			array( 'edt_jquery' )
 		);
+		wp_enqueue_script(
+			'edt_jquery_ui',
+			get_stylesheet_directory_uri() . '/library/js/jquery-ui-1.11.4/jquery-ui.min.js',
+			array( 'edt_jquery' )
+		);
+		wp_enqueue_script(
+			'single_route',
+			get_stylesheet_directory_uri() . '/library/js/single-route.js',
+			array( 'edt_jquery_ui' )
+		);
+		
+		wp_enqueue_script(
+			'modernizr',
+			get_stylesheet_directory_uri() . '/library/js/modernizr.js',
+			array( )
+		);
+		wp_enqueue_script(
+			'imap',
+			get_stylesheet_directory_uri() . '/library/js/imap.js',
+			array( 'edt_jquery')
+		);
+		
+		wp_enqueue_script(
+			'google_places',
+			'https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places',
+			array( )
+		);
+		
+		
 		
 		
     }
@@ -135,6 +168,7 @@ add_action( 'wp_enqueue_scripts', 'edt_add_stylesheets' );
 
 register_nav_menus( array(
 	'main_navigation' => 'Main Navigation',
+	'subpage_navigation' => 'Subpage Navigation',
 	'home_rider_info' => 'Home Rider Info Links',
 	'home_about' => 'Home About Links',
 ) );
@@ -180,9 +214,13 @@ class Main_Nav_Walker extends Walker {
 
 // adds item id
 function custom_walker_nav_menu_start_el($item_output, $item, $depth, $args){
-  $output = '<div class="main-nav-svg-holder"><svg rel="'.slugify($item->title).'-svg"> <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#'.slugify($item->title).'-svg" ></use></svg></div>';
-  $output .= $item_output;
-  return $output;
+	if($args->theme_location == "main_navigation"){
+  		$output = '<div class="main-nav-svg-holder"><svg rel="'.slugify($item->title).'-svg"> <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#'.slugify($item->title).'-svg" ></use></svg></div>';
+  		$output .= $item_output;
+	}else {
+		$output .= $item_output;
+	}
+	return $output;
 }
 add_filter( 'walker_nav_menu_start_el', 'custom_walker_nav_menu_start_el' , 10, 4 );
 
@@ -387,7 +425,7 @@ function trillium_gtfs_update_settings_page() {
 					$route_type 		= $splitLine[5];
 					$route_url		 	= $splitLine[6];
 					$route_color 		= $splitLine[7];
-					$route_text_color 	= $splitLine[8];
+					$route_text_color 	= preg_replace('/^\s+|\n|\r|\s+$/m', '', $splitLine[8]); // strips line break on last entry
 					
 					
 					

@@ -1,0 +1,50 @@
+// desktop legend scss
+
+
+.home {
+
+#map-legend-desktop {
+	
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	margin-top: 150px;
+	width: 13%;
+
+	position: absolute;
+	right: 4%;
+	bottom: 10%;
+	
+	
+	a.home-legend-button {
+		display: block;
+		position: relative;
+		padding: 6px;
+		border: 2px solid white;
+		margin-bottom: 7px;
+		border-radius: 10px;
+		color: white;
+		font-size: 1vw;
+		 font-weight: normal;
+		cursor: pointer;
+		text-transform: uppercase;
+		text-decoration: none;
+		text-align: center;
+		-webkit-box-shadow: 0px 3px 0px 0px rgba(0,0,0,.3);
+					-moz-box-shadow: 0px 3px 0px 0px rgba(0,0,0,.3);
+					box-shadow: 0px 3px 0px 0px rgba(0,0,0,.3);
+		
+		span {
+			position: absolute;
+			margin: 0 auto;
+			width: 100%;
+			left: 0;
+			top: 110%;
+			font-size: .7em;
+		}
+		
+	}
+}
+
+
+}

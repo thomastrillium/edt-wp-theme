@@ -1,0 +1,41 @@
+<?php # Script 13.1 - header.html
+// This page begins the HTML header for the site.
+
+// Start output buffering.
+ob_start();
+// Initialize a session.
+session_start();
+
+// Check for a $page_title value.
+if (!isset($page_title)) {
+	$page_title = 'Redwood Transit System';
+}
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+	<title><?php echo $page_title; ?></title>
+<link href="http://hta.arcatacommunity.org/includes/layout.css" rel="stylesheet" type="text/css" media="all">
+
+<?php
+echo '<style type="text/css" media="all">';
+
+if (isset($css)) {echo $css;}
+
+echo '</style>';
+
+?>
+
+</head>
+<body>
+
+<?php
+
+echo '<div id="Header">'.$page_title.'</div>';
+
+?>
+
+<div id="Content">
+<!-- End of Header -->

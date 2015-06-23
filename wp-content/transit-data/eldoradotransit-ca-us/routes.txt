@@ -1,8 +1,8 @@
 ﻿agency_id,route_id,route_short_name,route_long_name,route_desc,route_type,route_url,route_color,route_text_color
-261,1961,60,Pollock Pines,,3,,00801F,FFFFFF
-261,1964,40,Cameron Park,,3,,FA985B,000000
-261,1963,30,Diamond Springs,,3,,F7A6C9,000000
-261,1968,50X,50 Express,,3,,2A2A2A,FFFFFF
-261,1965,C,Commuter,,3,,00245D,FFFFFF
-261,1970,SE,Saturday Express,,3,,B2508F,000000
-261,1962,20,Placerville,,3,,345B8A,FFFFFF 
+261,1961,60,Pollock Pines,Pollock Pines provides local service to many different great places,3,,8a5e3b,FFFFFF
+261,1964,40,Cameron Park,,3,,FFA700,000000
+261,1963,30,Diamond Springs,,3,,8801aa,FFFFFF
+261,1968,50X,50 Express,,3,,70bf1f,FFFFFF
+261,1965,C,Commuter,,3,,193bb0,FFFFFF
+261,1970,SE,Saturday Express,,3,,959595,FFFFFF
+261,1962,20,Placerville,,3,,EF0000,FFFFFF

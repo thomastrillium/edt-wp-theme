@@ -21,7 +21,7 @@ var routeBounds;
 //var $hoverStroke;
 function showHighlight(routeName) {
 
-	var $routeGroups = $('#path-highlights > path, #path-highlights > g,#solid-overs > g, #solid-overs >path');
+	var $routeGroups = $('#path-highlights > path, #path-highlights > g, #solid-overs > g, #solid-overs > path');
 		
 	$.each($routeGroups, function(i, val) {
 		//console.log($(val).attr('id') + ' comp to: ' + routeName);
@@ -43,7 +43,6 @@ function showHighlight(routeName) {
 				
 			});
 			 
-		
 		}
 	});
 
@@ -107,7 +106,7 @@ function updateMap() {
 
 
 jQuery(document).ready(function($) {
-
+	if($('body').hasClass('home')){
 
 	mapX = mapXTarg = origMapX = parseFloat($('#home-map svg')[0].getAttribute('viewBox').split(' ')[0]);
 	mapY = mapYTarg = origMapY = parseFloat($('#home-map svg')[0].getAttribute('viewBox').split(' ')[1]);
@@ -226,7 +225,7 @@ jQuery(document).ready(function($) {
 		//$(this).css('stroke-width','40px');
 	});
 	
-	$('#hovers_1_').find('polygon, path').on('mouseenter click', function() {
+	$('#hovers').find('polygon, path').on('mouseenter click', function() {
 		if(!floatingMap){
 			var routeName = $(this).attr('id').split('_')[0];
 			//console.log(routeName);
@@ -239,11 +238,13 @@ jQuery(document).ready(function($) {
 		}		
 	});
 	
-	$('#hovers_1_').find('polygon, path').on('click', function() {
+	$('#hovers').find('polygon, path').on('click', function() {
 	
 		if(!floatingMap){
 			var routeName = $(this).attr('id').split('_')[0];
+			if(routeName === 'fiftyX') routeName = '50-express';
 			var getUrl = window.location;
+			
 			window.location = getUrl .protocol + "//" + getUrl.host + "/" + getUrl.pathname.split('/')[1] + '/routes/'+routeName;
 		}
 		
@@ -252,6 +253,6 @@ jQuery(document).ready(function($) {
 	 window.setInterval(function() {
   		updateMap();
 	}, 13);
-	
+	}
 });
 
